@@ -4,71 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8fa">
-  <meta name="description" content="Jiahui Zeng (曾家辉), a Ph.D. student at the University of Liverpool working on robotics foundation models. Currently interning at Dexteroushands.">
+  <meta name="description" data-i18n-content="meta.description" content="Jiahui Zeng, a Ph.D. student at the University of Liverpool researching robotics foundation models and dexterous manipulation. Part-time Embodied Intelligence Algorithm Engineer at Dexteroushands, developing manipulation algorithms for robots with dexterous hands in industrial settings.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Jiahui Zeng 曾家辉">
-  <meta property="og:description" content="Ph.D. student at the University of Liverpool. Researching robotics foundation models.">
-  <title>Jiahui Zeng 曾家辉</title>
+  <meta property="og:title" data-i18n-content="identity.name" content="Jiahui Zeng">
+  <meta property="og:description" data-i18n-content="meta.socialDescription" content="Ph.D. student at the University of Liverpool. Researching robotics foundation models and dexterous manipulation for real industrial tasks.">
+  <title data-i18n="identity.name">Jiahui Zeng</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231a3648'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Microsoft YaHei' font-size='44' fill='white'%3EJ%3C/text%3E%3C/svg%3E">
   <style>
-    :root { --paper:#f6f7fb; --ink:#1d2b47; --muted:#647189; --line:#e0e5ee; --blue:#365baa; --orange:#d47844; --font:"Microsoft YaHei",sans-serif; }
+    :root { --paper:#f6f7fb; --ink:#1d2b47; --muted:#4f5e75; --line:#e0e5ee; --blue:#365baa; --orange:#d47844; --font:"Microsoft YaHei",sans-serif; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; scroll-padding-top:96px; }
     body { margin:0; font-family:var(--font); color:var(--ink); background:var(--paper); line-height:1.7; -webkit-font-smoothing:antialiased; }
     ::selection { color:var(--ink); background:#dce8f3; }
     a { color:inherit; text-decoration:none; }
-    a:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
+    a:focus-visible,button:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
     .container { width:min(1120px,calc(100% - 80px)); margin-inline:auto; }
     .skip-link { position:absolute; left:20px; top:-80px; background:var(--ink); color:white; padding:8px 16px; z-index:20; }
     .skip-link:focus { top:12px; }
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
     .site-header { position:sticky; top:0; z-index:10; border-bottom:1px solid var(--line); background:rgba(247,248,250,.96); backdrop-filter:blur(14px); }
-    .header-inner { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .header-inner { min-height:82px; display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:24px; }
     .wordmark { display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:600; letter-spacing:0; white-space:nowrap; }
-    .navigation { display:flex; align-items:center; gap:28px; font-size:13px; color:var(--muted); }
+    .navigation { display:flex; align-items:center; justify-content:flex-end; gap:28px; font-size:15px; color:var(--muted); }
     .navigation a:hover { color:var(--blue); }
+    .language-switch { display:inline-flex; align-items:center; gap:3px; padding:4px; border:1px solid var(--line); border-radius:9px; background:white; }
+    .language-switch button { border:0; border-radius:6px; padding:7px 9px; min-height:40px; background:transparent; color:var(--muted); font:inherit; font-size:14px; font-weight:600; line-height:1.4; cursor:pointer; }
+    .language-switch button:hover { background:#edf2fc; color:var(--blue); }
+    .language-switch button[aria-pressed="true"] { background:var(--ink); color:white; }
+    html[lang="zh-CN"] .eyebrow,html[lang="zh-CN"] .section-index,html[lang="zh-CN"] .small-label,html[lang="zh-CN"] .entry-type { letter-spacing:.03em; }
     .arrow { display:inline-block; font-size:17px; line-height:1; }
     .hero { display:grid; grid-template-columns:300px minmax(0,1fr); align-items:center; gap:72px; padding:74px 0 66px; }
-    .eyebrow,.section-index { font-family:var(--font); font-size:11px; letter-spacing:.1em; text-transform:uppercase; }
-    .eyebrow { display:inline-flex; align-items:center; gap:9px; color:var(--blue); margin:0 0 23px; background:#eaf0fc; border:1px solid #dde6f7; border-radius:30px; padding:7px 11px; }
-    .status-dot { width:6px; height:6px; flex-shrink:0; border-radius:50%; background:var(--blue); box-shadow:0 0 0 4px #e4ebf1; }
+    .eyebrow,.section-index { font-family:var(--font); font-size:14px; letter-spacing:.05em; text-transform:uppercase; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; color:var(--blue); margin:0 0 23px; background:#eaf0fc; border:1px solid #dde6f7; border-radius:30px; padding:8px 12px; }
+    .status-dot { width:7px; height:7px; flex-shrink:0; border-radius:50%; background:var(--blue); box-shadow:0 0 0 4px #e4ebf1; }
     h1 { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 16px; margin:0 0 24px; font-family:var(--font); font-weight:600; font-size:44px; letter-spacing:-.03em; line-height:1.3; }
-    .english-name,.chinese-name { font:inherit; letter-spacing:inherit; white-space:nowrap; }
     .intro { max-width:660px; margin:0; font-size:20px; color:var(--muted); line-height:1.9; }
     .intro strong { color:var(--ink); font-weight:600; }
     .inline-link { text-decoration:underline; text-decoration-color:#b0c1ce; text-underline-offset:4px; }
     .inline-link:hover { color:var(--blue); }
     .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:26px; margin-top:30px; }
-    .button { display:inline-flex; align-items:center; justify-content:center; gap:19px; padding:11px 18px; font-size:12px; font-weight:600; border-radius:4px; background:var(--ink); color:white; transition:background .15s,transform .15s; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:19px; padding:12px 20px; font-size:15px; font-weight:600; border-radius:4px; background:var(--ink); color:white; transition:background .15s,transform .15s; }
     .button:hover { background:var(--blue); transform:translateY(-1px); }
     .hero-portrait { width:100%; justify-self:start; margin:0; padding:10px; background:white; border:1px solid #dce3ed; border-radius:20px; box-shadow:0 18px 50px -33px #687b9d; }
     .hero-portrait img { display:block; width:100%; height:auto; aspect-ratio:2 / 3; border-radius:12px; }
-    .affiliation-strip { display:grid; grid-template-columns:1.1fr 1fr 1.2fr; gap:14px; padding:0 0 35px; border-bottom:1px solid var(--line); }
-    .affiliation { display:flex; align-items:center; gap:13px; padding:18px; background:white; border:1px solid var(--line); border-radius:12px; }
-    .affiliation-icon { flex-shrink:0; display:grid; place-items:center; width:43px; height:43px; background:#f0f3fc; border-radius:9px; color:var(--blue); font-family:var(--font); font-size:24px; }
+    .affiliation-strip { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-auto-rows:1fr; gap:14px; padding:0 0 35px; border-bottom:1px solid var(--line); }
+    .affiliation { display:grid; grid-template-columns:72px minmax(0,1fr); align-items:center; min-height:104px; gap:13px; padding:20px 18px; background:white; border:1px solid var(--line); border-radius:12px; }
+    .affiliation > div { min-width:0; align-self:start; }
+    .affiliation-icon { justify-self:center; display:grid; place-items:center; width:43px; height:43px; background:#f0f3fc; border-radius:9px; color:var(--blue); font-family:var(--font); font-size:24px; }
     .affiliation-icon img { width:32px; height:34px; object-fit:contain; }
     .affiliation-icon.image { background:white; }
     .affiliation-icon.wide { width:72px; }
     .affiliation-icon.wide img { width:70px; height:38px; }
-    .small-label { display:block; font-family:var(--font); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
-    .affiliation p { margin:0; font-size:12px; font-weight:600; line-height:1.7; }
+    .small-label { display:block; font-family:var(--font); font-size:14px; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+    .affiliation p { margin:0; font-size:16px; font-weight:600; line-height:1.7; }
     .affiliation p span { color:var(--muted); }
     .page-section { display:grid; grid-template-columns:145px minmax(0,1fr); gap:30px; padding:58px 0; border-bottom:1px solid var(--line); }
     .section-index { color:var(--ink); padding-top:8px; margin:0; }
-    .section-index span { display:inline-grid; place-items:center; width:25px; height:25px; border:1px solid #dae3f1; border-radius:7px; color:var(--blue); background:#edf2fc; margin-right:9px; }
+    .section-index > span:first-child { display:inline-grid; place-items:center; width:25px; height:25px; border:1px solid #dae3f1; border-radius:7px; color:var(--blue); background:#edf2fc; margin-right:9px; }
     h2 { font-family:var(--font); font-size:35px; font-weight:600; letter-spacing:-.035em; line-height:1.3; margin:0 0 19px; }
-    .section-copy { max-width:700px; color:var(--muted); font-size:15px; margin:0; line-height:1.95; }
+    .section-copy { max-width:800px; color:var(--muted); font-size:18px; margin:0; line-height:1.9; }
     .topic-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:25px 0 0; padding:0; list-style:none; }
-    .topic-list li { font-size:12px; border:1px solid #dce4f1; border-radius:10px; padding:18px; color:#334e83; background:#edf2fc; }
+    .topic-list li { font-size:15px; border:1px solid #dce4f1; border-radius:10px; padding:18px; color:#334e83; background:#edf2fc; }
     .topic-list li:nth-child(2) { color:#276e68; border-color:#d5e7e2; background:#eaf4ef; }
     .topic-list li:nth-child(3) { color:#965b32; border-color:#eddfd0; background:#faf0e6; }
-    .topic-number { display:block; margin-bottom:14px; font-family:var(--font); font-size:10px; opacity:.7; }
-    .topic-list strong { display:block; font-size:13px; font-weight:600; line-height:1.5; }
-    .topic-list p { font-size:11px; line-height:1.8; margin:7px 0 0; }
+    .topic-number { display:block; margin-bottom:14px; font-family:var(--font); font-size:13px; font-weight:500; }
+    .topic-list strong { display:block; font-size:17px; font-weight:600; line-height:1.5; }
+    .topic-list p { font-size:15px; line-height:1.8; margin:10px 0 0; }
     .research-note { display:flex; align-items:flex-start; gap:15px; margin-top:20px; padding:19px 21px; background:white; border:1px solid var(--line); border-radius:10px; }
     .note-symbol { font-family:var(--font); font-size:24px; line-height:1.4; color:var(--orange); }
-    .research-note h3 { font-size:12px; font-weight:600; margin:0 0 4px; }
-    .research-note p { color:var(--muted); font-size:12px; margin:0; line-height:1.8; }
+    .research-note h3 { font-size:17px; font-weight:600; margin:0 0 4px; }
+    .research-note p { color:var(--muted); font-size:16px; margin:0; line-height:1.8; }
     .timeline { display:grid; gap:16px; list-style:none; padding:0; margin:25px 0 0; }
     .education-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
     .timeline > li { position:relative; display:grid; grid-template-columns:64px minmax(0,1fr); align-items:start; gap:18px; padding:24px; background:white; border:1px solid var(--line); border-top:3px solid var(--brand,#365baa); border-radius:12px; box-shadow:0 7px 24px -19px #344768; transition:transform .2s,box-shadow .2s; }
@@ -80,17 +85,14 @@
     .org-logo.logo-wide { padding:10px; }
     .org-logo.logo-dark { background:#050607; border-color:#050607; }
     .entry-topline { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:0 0 8px; }
-    .entry-type { font-family:var(--font); color:var(--brand,#365baa); font-size:10px; letter-spacing:.05em; text-transform:uppercase; }
-    .timeline-date { margin-top:15px; padding-top:12px; border-top:1px solid #edf0f5; color:var(--muted); font-family:var(--font); font-size:10px; line-height:1.8; }
-    .timeline-date .date-note { display:block; color:#738591; font-family:var(--font); font-size:10px; }
+    .entry-type { font-family:var(--font); color:var(--ink); font-weight:600; font-size:14px; letter-spacing:.05em; text-transform:uppercase; }
+    .timeline-date { margin-top:15px; padding-top:12px; border-top:1px solid #edf0f5; color:var(--muted); font-family:var(--font); font-size:14px; line-height:1.8; }
     .entry-topline .timeline-date { margin:0 0 0 auto; padding:0; border:0; }
-    .timeline h3 { margin:0; font-size:17px; font-weight:600; letter-spacing:-.025em; line-height:1.5; }
-    .timeline p { margin:5px 0 0; font-size:12px; color:var(--muted); line-height:1.8; }
+    .timeline h3 { margin:0; font-size:20px; font-weight:600; letter-spacing:-.025em; line-height:1.5; }
+    .timeline p { margin:5px 0 0; font-size:16px; color:var(--muted); line-height:1.8; }
     .timeline .position { color:var(--ink); }
-    .timeline .entry-meta { margin-top:7px; font-size:11px; }
-    .skill-list { display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0; margin:12px 0 0; }
-    .timeline .skill-list li { display:block; padding:3px 9px; border:1px solid #e1e8ed; border-radius:5px; background:#f5f7fa; color:#526780; font-size:10px; }
-    .current-tag { display:inline-block; font-size:9px; font-weight:500; color:#217668; border:1px solid #cce7dd; border-radius:4px; background:#edf8f1; padding:1px 7px; vertical-align:middle; }
+    .timeline .entry-meta { margin-top:7px; font-size:14px; }
+    .current-tag { display:inline-block; font-size:13px; font-weight:500; color:#217668; border:1px solid #cce7dd; border-radius:4px; background:#edf8f1; padding:2px 8px; vertical-align:middle; }
     .contact-section { border-bottom:0; padding-bottom:64px; }
     .contact-layout { display:flex; justify-content:space-between; align-items:center; gap:32px; padding:28px; background:linear-gradient(110deg,#e9eefb,#eaf4f1); border:1px solid #dbe4ed; border-radius:14px; }
     .contact-layout h2 { margin-bottom:12px; }
@@ -98,125 +100,336 @@
     .contact-emails { display:flex; flex-direction:column; align-items:flex-start; gap:12px; min-width:0; }
     .contact-email { max-width:100%; font-size:17px; font-weight:600; overflow-wrap:anywhere; }
     .site-footer { border-top:1px solid var(--line); }
-    .footer-inner { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 20px; padding:23px 0; color:var(--muted); font-size:10px; }
+    .footer-inner { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 20px; padding:23px 0; color:var(--muted); font-size:14px; }
     .footer-inner a:hover { color:var(--blue); }
     @media (min-width:1400px) { .hero { padding-top:86px; padding-bottom:78px; } }
     @media (max-width:1100px) { .education-list { grid-template-columns:1fr; } .affiliation { padding:15px; gap:10px; } .affiliation-icon { width:34px; } .affiliation-icon.wide { width:54px; } .affiliation-icon.wide img { width:52px; } }
-    @media (max-width:950px) { .container { width:calc(100% - 48px); } .hero { grid-template-columns:230px minmax(0,1fr); gap:30px; padding:53px 0; } h1 { font-size:38px; } .page-section { grid-template-columns:125px minmax(0,1fr); gap:20px; } .contact-layout { align-items:flex-start; flex-direction:column; gap:22px; } .affiliation-strip { grid-template-columns:1fr; gap:10px; } .affiliation { padding:13px 18px; } .affiliation-icon.wide { width:70px; } .affiliation-icon.wide img { width:68px; } }
+    @media (max-width:950px) { .navigation { gap:18px; font-size:14px; } .container { width:calc(100% - 48px); } .hero { grid-template-columns:230px minmax(0,1fr); gap:30px; padding:53px 0; } h1 { font-size:38px; } .page-section { grid-template-columns:125px minmax(0,1fr); gap:20px; } .contact-layout { align-items:flex-start; flex-direction:column; gap:22px; } .affiliation-strip { grid-template-columns:1fr; gap:10px; } .affiliation { padding:13px 18px; } .affiliation-icon.wide { width:70px; } .affiliation-icon.wide img { width:68px; } }
     @media (max-width:700px) {
-      html { scroll-padding-top:114px; } .container { width:calc(100% - 40px); } .header-inner { min-height:90px; flex-wrap:wrap; padding:12px 0 10px; gap:8px; }
+      html { scroll-padding-top:140px; } .container { width:calc(100% - 40px); } .header-inner { min-height:116px; grid-template-columns:minmax(0,1fr) auto; padding:12px 0 10px; gap:12px 8px; }
       .wordmark { font-size:16px; gap:8px; }
-      .navigation { width:100%; justify-content:space-between; gap:10px; font-size:11px; }
-      .hero { grid-template-columns:1fr; padding:44px 0 35px; gap:35px; } .eyebrow { font-size:10px; margin-bottom:21px; }
+      .navigation { grid-column:1 / -1; grid-row:2; width:100%; justify-content:space-between; gap:8px; font-size:14px; }
+      .language-switch { grid-column:2; grid-row:1; }
+      .language-switch button { min-height:44px; padding:7px 10px; }
+      .hero { grid-template-columns:1fr; padding:44px 0 35px; gap:35px; } .eyebrow { font-size:13px; margin-bottom:21px; }
       h1 { font-size:clamp(30px,8.5vw,40px); gap:6px 12px; margin-bottom:20px; }
       .intro { font-size:18px; } .hero-actions { margin-top:25px; }
       .contact-email { font-size:16px; }
       .hero-portrait { width:min(100%,230px); justify-self:center; padding:8px; border-radius:16px; } .hero-portrait img { border-radius:9px; }
-      .affiliation-strip { grid-template-columns:1fr; gap:10px; padding:0 0 30px; } .affiliation { padding:14px 17px; gap:13px; } .affiliation-icon { width:45px; } .affiliation-icon.wide { width:70px; } .small-label { margin:0 0 3px; font-size:8px; } .affiliation p { font-size:12px; }
-      .page-section { grid-template-columns:1fr; gap:20px; padding:37px 0; } .section-index { padding:0; font-size:10px; } h2 { font-size:31px; }
-      .section-copy { font-size:14px; } .research-note { padding:17px; margin-top:18px; } .topic-list { grid-template-columns:1fr; gap:10px; } .topic-list li { padding:16px 18px; } .topic-number { float:right; margin-bottom:0; } .topic-list strong { max-width:85%; } .topic-list p { margin-top:4px; }
-      .timeline { gap:13px; margin-top:21px; } .timeline > li { grid-template-columns:52px minmax(0,1fr); gap:13px; padding:19px 16px; } .org-logo { width:52px; height:64px; padding:6px; border-radius:8px; } .internship-list > li { grid-template-columns:1fr; gap:16px; } .internship-list .org-logo { width:140px; height:68px; padding:10px; } .timeline h3 { font-size:15px; } .timeline p { font-size:12px; } .timeline-date { font-size:9px; } .entry-topline { gap:7px; margin-bottom:7px; } .entry-topline .timeline-date { margin-left:0; width:100%; } .timeline .skill-list li { padding:3px 7px; font-size:9px; } .contact-layout { padding:23px; }
-      .contact-section { padding-bottom:43px; } .footer-inner { font-size:9px; }
+      .affiliation-strip { grid-template-columns:1fr; gap:10px; padding:0 0 30px; } .affiliation { padding:14px 17px; gap:13px; } .affiliation-icon { width:45px; } .affiliation-icon.wide { width:70px; } .small-label { margin:0 0 7px; font-size:13px; } .affiliation p { font-size:16px; }
+      .page-section { grid-template-columns:1fr; gap:20px; padding:37px 0; } .section-index { padding:0; font-size:14px; } h2 { font-size:31px; }
+      .section-copy { font-size:17px; } .research-note { padding:17px; margin-top:18px; } .topic-list { grid-template-columns:1fr; gap:10px; } .topic-list li { padding:16px 18px; } .topic-number { margin-bottom:10px; } .topic-list strong { max-width:100%; } .topic-list p { margin-top:8px; }
+      .timeline { gap:13px; margin-top:21px; } .timeline > li { grid-template-columns:52px minmax(0,1fr); gap:13px; padding:19px 16px; } .org-logo { width:52px; height:64px; padding:6px; border-radius:8px; } .internship-list > li { grid-template-columns:1fr; gap:16px; } .internship-list .org-logo { width:140px; height:68px; padding:10px; } .timeline h3 { font-size:18px; } .timeline p { font-size:16px; } .timeline-date { font-size:14px; } .entry-topline { gap:7px; margin-bottom:7px; } .entry-topline .timeline-date { margin-left:0; width:100%; } .contact-layout { padding:23px; }
+      .contact-section { padding-bottom:43px; } .footer-inner { font-size:13px; }
     }
-    @media (max-width:360px) { .navigation { gap:11px; } .hero-actions { gap:20px; } h1 { font-size:30px; } }
+    @media (max-width:360px) { html { scroll-padding-top:180px; } .navigation { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 16px; } .navigation a { padding:3px 0; } .hero-actions { gap:20px; } h1 { font-size:30px; } }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="wordmark" href="#main" aria-label="Jiahui Zeng 曾家辉, back to top"><span>Jiahui Zeng</span><span lang="zh-CN">曾家辉</span></a>
-      <nav class="navigation" aria-label="Main navigation">
-        <a href="#research">Research</a><a href="#education">Education</a><a href="#internships">Internships</a><a href="#contact">Contact</a>
+      <a class="wordmark" href="#main" aria-label="Jiahui Zeng, back to top" data-i18n="identity.name" data-i18n-aria-label="a11y.home">Jiahui Zeng</a>
+      <nav class="navigation" aria-label="Main navigation" data-i18n-aria-label="a11y.navigation">
+        <a href="#research" data-i18n="nav.research">Research</a><a href="#education" data-i18n="nav.education">Education</a><a href="#internships" data-i18n="nav.internships">Experience</a><a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Website language" data-i18n-aria-label="language.label">
+        <button type="button" data-language="en" lang="en" aria-label="Switch to English" aria-pressed="true">EN</button>
+        <button type="button" data-language="zh" lang="zh-CN" aria-label="切换为中文" aria-pressed="false">中文</button>
+      </div>
     </div>
   </header>
   <main id="main" class="container">
     <section class="hero" aria-labelledby="name">
       <figure class="hero-portrait">
-        <img src="assets/jiahui-zeng-portrait.png" alt="Portrait of Jiahui Zeng (曾家辉)" width="1024" height="1536" fetchpriority="high" decoding="async">
+        <img src="assets/jiahui-zeng-portrait.png" alt="Portrait of Jiahui Zeng" data-i18n-alt="a11y.portrait" width="1024" height="1536" fetchpriority="high" decoding="async">
       </figure>
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Ph.D. Student · University of Liverpool</p>
-        <h1 id="name"><span class="english-name">Jiahui Zeng</span> <span class="chinese-name" lang="zh-CN">曾家辉</span></h1>
-        <p class="intro">I'm a Ph.D. student at the <a class="inline-link" href="https://www.liverpool.ac.uk/">University of Liverpool</a>, working on <strong>robotics foundation models</strong>. I'm currently a Robotics Engineer intern at <strong>Dexteroushands</strong>, exploring intelligence for robots in the real world.</p>
-        <div class="hero-actions"><a class="button" href="#research">Explore my research <span class="arrow" aria-hidden="true">↓</span></a></div>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.status">Ph.D. Student · University of Liverpool</span></p>
+        <h1 id="name" data-i18n="identity.name">Jiahui Zeng</h1>
+        <p class="intro" data-i18n-html="hero.intro">I'm a Ph.D. student at the <strong>University of Liverpool</strong>, researching <strong>robotics foundation models and dexterous manipulation</strong>. I also work part-time at <strong>Dexteroushands</strong> as an <strong>Embodied Intelligence Algorithm Engineer</strong>, developing and deploying manipulation algorithms for robots equipped with dexterous hands in real industrial settings.</p>
+        <div class="hero-actions"><a class="button" href="#research"><span data-i18n="hero.explore">Explore my research</span> <span class="arrow" aria-hidden="true">↓</span></a></div>
       </div>
     </section>
-    <div class="affiliation-strip" aria-label="At a glance">
-      <div class="affiliation"><span class="affiliation-icon image"><img src="assets/logos/liverpool.png?v=0b1c3a92" width="107" height="162" alt=""></span><div><span class="small-label">Based at</span><p>University of Liverpool</p></div></div>
-      <div class="affiliation"><span class="affiliation-icon" aria-hidden="true">⌘</span><div><span class="small-label">Working on</span><p>Robotics Foundation Models</p></div></div>
-      <div class="affiliation"><span class="affiliation-icon image wide"><img src="assets/logos/dexteroushands.png?v=346f2f8f" width="1000" height="246" alt="Dexteroushands"></span><div><span class="small-label">Currently</span><p>Robotics Engineer Intern</p></div></div>
+    <div class="affiliation-strip" aria-label="At a glance" data-i18n-aria-label="a11y.glance">
+      <div class="affiliation"><span class="affiliation-icon image"><img src="assets/logos/liverpool.png?v=0b1c3a92" width="107" height="162" alt=""></span><div><span class="small-label" data-i18n="glance.based">Based at</span><p data-i18n="org.liverpool">University of Liverpool</p></div></div>
+      <div class="affiliation"><span class="affiliation-icon" aria-hidden="true">⌘</span><div><span class="small-label" data-i18n="glance.research">Working on</span><p data-i18n="research.focus">Foundation Models &amp; Dexterous Manipulation</p></div></div>
+      <div class="affiliation"><span class="affiliation-icon image wide"><img src="assets/logos/dexteroushands.png?v=346f2f8f" width="1000" height="246" alt="Dexteroushands"></span><div><span class="small-label" data-i18n="glance.current">Currently part-time</span><p data-i18n="role.embodiedAlgorithm">Embodied Intelligence Algorithm Engineer</p></div></div>
     </div>
     <section id="research" class="page-section" aria-labelledby="research-heading">
-      <p class="section-index"><span>01</span>Research</p>
+      <p class="section-index"><span>01</span><span data-i18n="nav.research">Research</span></p>
       <div>
-        <h2 id="research-heading">Intelligence that meets the world.</h2>
-        <p class="section-copy">My research focuses on foundation models for robotics: connecting the capabilities of large models with robots that interact with the physical world. I'm interested in the path from understanding to action, and how intelligent models can become useful in embodied systems.</p>
-        <ul class="topic-list" aria-label="Research topics"><li><span class="topic-number">01 / MODELS</span><strong>Robotics Foundation Models</strong><p>From large models to physical action.</p></li><li><span class="topic-number">02 / EMBODIMENT</span><strong>Embodied Intelligence</strong><p>Intelligence through interaction.</p></li><li><span class="topic-number">03 / LEARNING</span><strong>Robot Learning</strong><p>Learning for embodied systems.</p></li></ul>
-        <div class="research-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h3>Research in progress</h3><p>I'll share research projects and publications here as they become available.</p></div></div>
+        <h2 id="research-heading" data-i18n="research.heading">Robot intelligence for real industrial tasks</h2>
+        <p class="section-copy" data-i18n="research.description">My research centers on robotics foundation models and dexterous manipulation, with a focus on perception, learning, and manipulation for robots equipped with dexterous hands in real industrial settings. Guided by industrial tasks, I explore algorithms that connect visual perception with action generation and bring embodied intelligence into practical use.</p>
+        <ul class="topic-list" aria-label="Research topics" data-i18n-aria-label="a11y.topics"><li><span class="topic-number" data-i18n="research.numberModels">01 / MODELS</span><strong data-i18n="research.models">Robotics Foundation Models</strong><p data-i18n="research.modelsDescription">Connecting perception and task understanding with robot actions.</p></li><li><span class="topic-number" data-i18n="research.numberEmbodiment">02 / MANIPULATION</span><strong data-i18n="research.embodiment">Dexterous Manipulation</strong><p data-i18n="research.embodimentDescription">Coordinating robots and dexterous hands for industrial manipulation.</p></li><li><span class="topic-number" data-i18n="research.numberLearning">03 / LEARNING</span><strong data-i18n="research.learning">Robot Learning for Industry</strong><p data-i18n="research.learningDescription">Validating and applying learning algorithms through real industrial tasks.</p></li></ul>
+        <div class="research-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h3 data-i18n="research.progress">Research in progress</h3><p data-i18n="research.progressDescription">I'll share research projects and publications here as they become available.</p></div></div>
       </div>
     </section>
     <section id="education" class="page-section" aria-labelledby="education-heading">
-      <p class="section-index"><span>02</span>Education</p>
+      <p class="section-index"><span>02</span><span data-i18n="nav.education">Education</span></p>
       <div>
-        <h2 id="education-heading">Academic background.</h2>
-        <ol class="timeline education-list" aria-label="Education history">
+        <h2 id="education-heading" data-i18n="education.heading">Academic background.</h2>
+        <ol class="timeline education-list" aria-label="Education history" data-i18n-aria-label="a11y.education">
           <li style="--brand:#283568">
-            <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" width="107" height="162" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Doctoral studies</span><span class="current-tag">Current</span></div><h3>University of Liverpool</h3><p class="position">Doctor of Philosophy (Ph.D.)</p><p>Electrical and Electronics Engineering</p><div class="timeline-date"><time datetime="2025-09">Sep 2025</time> – <time datetime="2029-06">Jun 2029</time><span class="date-note">Expected completion</span></div></div>
+            <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" data-i18n-alt="a11y.logo.liverpool" width="107" height="162" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.doctoral">Doctoral studies</span><span class="current-tag" data-i18n="education.current">Current</span></div><h3 data-i18n="org.liverpool">University of Liverpool</h3><p class="position" data-i18n="education.phd">Doctor of Philosophy (Ph.D.)</p><p data-i18n="education.phdSubject">Electrical and Electronics Engineering</p><div class="timeline-date"><time datetime="2025-09">Sep 2025</time> – <span data-i18n="date.present">Present</span></div></div>
           </li>
           <li style="--brand:#283568">
-            <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" width="107" height="162" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Master's degree</span></div><h3>University of Liverpool</h3><p class="position">Master of Research (M.Res.)</p><p>Pattern Recognition and Intelligent System</p><div class="timeline-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-04">Apr 2025</time></div></div>
+            <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" data-i18n-alt="a11y.logo.liverpool" width="107" height="162" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.masters">Master's degree</span></div><h3 data-i18n="org.liverpool">University of Liverpool</h3><p class="position" data-i18n="education.mres">Master of Research (M.Res.)</p><p data-i18n="education.mresSubject">Pattern Recognition and Intelligent System</p><div class="timeline-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-04">Apr 2025</time></div></div>
           </li>
           <li style="--brand:#d99737">
-            <div class="org-logo"><img src="assets/logos/sustech.png?v=8e54a0ee" alt="Southern University of Science and Technology logo" width="383" height="383" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Visiting student</span></div><h3>Southern University of Science and Technology</h3><p class="position">Visiting Student</p><div class="timeline-date"><time datetime="2024-10">Oct 2024</time> – <time datetime="2024-12">Dec 2024</time></div></div>
+            <div class="org-logo"><img src="assets/logos/sustech.png?v=8e54a0ee" alt="Southern University of Science and Technology logo" data-i18n-alt="a11y.logo.sustech" width="383" height="383" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.visitingType">Visiting student</span></div><h3 data-i18n="org.sustech">Southern University of Science and Technology</h3><p class="position" data-i18n="education.visitingRole">Visiting Student</p><div class="timeline-date"><time datetime="2024-10">Oct 2024</time> – <time datetime="2024-12">Dec 2024</time></div></div>
           </li>
           <li style="--brand:#169ac3">
-            <div class="org-logo"><img src="assets/logos/nanjing-tech.png?v=ec2b9ad4" alt="Nanjing Tech University logo" width="838" height="1000" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Bachelor's degree</span></div><h3>Nanjing Tech University</h3><p class="position">Bachelor of Engineering (B.Eng.)</p><p>Mechanical Engineering</p><div class="timeline-date"><time datetime="2019-09">Sep 2019</time> – <time datetime="2023-06">Jun 2023</time></div></div>
+            <div class="org-logo"><img src="assets/logos/nanjing-tech.png?v=ec2b9ad4" alt="Nanjing Tech University logo" data-i18n-alt="a11y.logo.nanjingTech" width="838" height="1000" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.bachelors">Bachelor's degree</span></div><h3 data-i18n="org.nanjingTech">Nanjing Tech University</h3><p class="position" data-i18n="education.beng">Bachelor of Engineering (B.Eng.)</p><p data-i18n="education.bengSubject">Mechanical Engineering</p><div class="timeline-date"><time datetime="2019-09">Sep 2019</time> – <time datetime="2023-06">Jun 2023</time></div></div>
           </li>
         </ol>
       </div>
     </section>
     <section id="internships" class="page-section" aria-labelledby="internships-heading">
-      <p class="section-index"><span>03</span>Internships</p>
+      <p class="section-index"><span>03</span><span data-i18n="nav.internships">Experience</span></p>
       <div>
-        <h2 id="internships-heading">Industry &amp; research experience.</h2>
-        <ol class="timeline internship-list" aria-label="Internship history">
+        <h2 id="internships-heading" data-i18n="internships.heading">Industry &amp; research experience.</h2>
+        <ol class="timeline internship-list" aria-label="Work experience" data-i18n-aria-label="a11y.internships">
           <li style="--brand:#279b9a">
-            <div class="org-logo logo-wide"><img src="assets/logos/dexteroushands.png?v=346f2f8f" alt="Dexteroushands logo" width="1000" height="246" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Internship</span><span class="current-tag">Current</span><div class="timeline-date"><time datetime="2025-05">May 2025</time> – Present</div></div><h3>Dexteroushands</h3><p class="position">Robotics Engineer</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><ul class="skill-list" aria-label="Skills at Dexteroushands"><li>Visual Perception</li><li>Robotics</li></ul></div>
+            <div class="org-logo logo-wide"><img src="assets/logos/dexteroushands.png?v=346f2f8f" alt="Dexteroushands logo" data-i18n-alt="a11y.logo.dexteroushands" width="1000" height="246" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="experience.partTime">Part-time</span><span class="current-tag" data-i18n="internships.current">Current</span><div class="timeline-date"><time datetime="2025-05">May 2025</time> – <span data-i18n="date.present">Present</span></div></div><h3>Dexteroushands</h3><p class="position" data-i18n="role.embodiedAlgorithm">Embodied Intelligence Algorithm Engineer</p><p class="entry-meta" data-i18n="location.wuxi">Wuxi, Jiangsu, China</p></div>
           </li>
           <li style="--brand:#f58b1c">
-            <div class="org-logo logo-wide logo-dark"><img src="assets/logos/infimaker.png?v=d68e2eed" alt="InfiMaker logo" width="234" height="48" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2024-12">Dec 2024</time> – <time datetime="2025-05">May 2025</time></div></div><h3>InfiMaker</h3><p class="position">Robotics Engineer</p><p class="entry-meta">Shanghai, China · On-site</p><ul class="skill-list" aria-label="Skills at InfiMaker"><li>Visual Perception</li><li>Camera Calibration</li></ul></div>
+            <div class="org-logo logo-wide logo-dark"><img src="assets/logos/infimaker.png?v=d68e2eed" alt="InfiMaker logo" data-i18n-alt="a11y.logo.infimaker" width="234" height="48" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="internships.type">Internship</span><div class="timeline-date"><time datetime="2024-12">Dec 2024</time> – <time datetime="2025-05">May 2025</time></div></div><h3>InfiMaker</h3><p class="position" data-i18n="role.engineer">Robotics Engineer</p><p class="entry-meta" data-i18n="location.shanghai">Shanghai, China</p></div>
           </li>
           <li style="--brand:#339b8a">
-            <div class="org-logo"><img src="assets/logos/jitri.png?v=e6b3a495" alt="Jiangsu Industrial Technology Research Institute logo" width="94" height="115" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2024-01">Jan 2024</time> – <time datetime="2024-10">Oct 2024</time></div></div><h3>Jiangsu Industrial Technology Research Institute</h3><p class="position">Researcher</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><ul class="skill-list" aria-label="Skills at Jiangsu Industrial Technology Research Institute"><li>Computer Vision</li><li>Deep Learning</li></ul></div>
+            <div class="org-logo"><img src="assets/logos/jitri.png?v=e6b3a495" alt="Jiangsu Industrial Technology Research Institute logo" data-i18n-alt="a11y.logo.jitri" width="94" height="115" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="internships.type">Internship</span><div class="timeline-date"><time datetime="2024-01">Jan 2024</time> – <time datetime="2024-10">Oct 2024</time></div></div><h3 data-i18n="org.jitri">Jiangsu Industrial Technology Research Institute</h3><p class="position" data-i18n="role.researcher">Visual Algorithm Engineer</p><p class="entry-meta" data-i18n="location.wuxi">Wuxi, Jiangsu, China</p></div>
           </li>
           <li style="--brand:#b83f4e">
-            <div class="org-logo logo-wide"><img src="assets/logos/bosch.png?v=c72ac9c1" alt="Bosch logo" width="773" height="193" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2023-04">Apr 2023</time> – <time datetime="2023-09">Sep 2023</time></div></div><h3>Bosch China</h3><p class="position">Automation Engineer</p><p class="entry-meta">Suzhou, Jiangsu, China · On-site</p><ul class="skill-list" aria-label="Skills at Bosch"><li>Machine Vision</li><li>Beckhoff TwinCAT</li></ul></div>
+            <div class="org-logo logo-wide"><img src="assets/logos/bosch.png?v=c72ac9c1" alt="Bosch logo" data-i18n-alt="a11y.logo.bosch" width="773" height="193" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="internships.type">Internship</span><div class="timeline-date"><time datetime="2023-04">Apr 2023</time> – <time datetime="2023-09">Sep 2023</time></div></div><h3 data-i18n="org.bosch">Bosch China</h3><p class="position" data-i18n="role.automation">Automation Engineer</p><p class="entry-meta" data-i18n="location.suzhou">Suzhou, Jiangsu, China</p></div>
           </li>
         </ol>
       </div>
     </section>
     <section id="contact" class="page-section contact-section" aria-labelledby="contact-heading">
-      <p class="section-index"><span>04</span>Contact</p>
+      <p class="section-index"><span>04</span><span data-i18n="nav.contact">Contact</span></p>
       <div class="contact-layout">
-        <h2 id="contact-heading">Contact</h2>
-        <div class="contact-emails" aria-label="Email addresses">
+        <h2 id="contact-heading" data-i18n="nav.contact">Contact</h2>
+        <div class="contact-emails" aria-label="Email addresses" data-i18n-aria-label="a11y.emails">
           <a class="contact-email inline-link" href="mailto:psjzeng8@liverpool.ac.uk">psjzeng8@liverpool.ac.uk</a>
           <a class="contact-email inline-link" href="mailto:garryz.sep@gmail.com">garryz.sep@gmail.com</a>
         </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Jiahui Zeng 曾家辉</span><span>Robotics &amp; Embodied Intelligence <span aria-hidden="true">/</span> <a href="#main">Back to top ↑</a></span></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><span data-i18n="footer.copyright">© 2026 Jiahui Zeng</span><span><span data-i18n="footer.field">Robotics &amp; Embodied Intelligence</span> <span aria-hidden="true">/</span> <a href="#main" data-i18n="footer.top">Back to top ↑</a></span></div></footer>
+
+  <script>
+    (() => {
+      'use strict';
+      const messages = {
+  "en": {
+    "language.label": "Website language",
+    "education.current": "Current",
+    "internships.current": "Current",
+    "skip": "Skip to content",
+    "nav.research": "Research",
+    "nav.education": "Education",
+    "nav.internships": "Experience",
+    "nav.contact": "Contact",
+    "hero.status": "Ph.D. Student · University of Liverpool",
+    "hero.explore": "Explore my research",
+    "hero.intro": "I'm a Ph.D. student at the \u003cstrong>University of Liverpool\u003c/strong>, researching \u003cstrong>robotics foundation models and dexterous manipulation\u003c/strong>. I also work part-time at \u003cstrong>Dexteroushands\u003c/strong> as an \u003cstrong>Embodied Intelligence Algorithm Engineer\u003c/strong>, developing and deploying manipulation algorithms for robots equipped with dexterous hands in real industrial settings.",
+    "glance.based": "Based at",
+    "glance.research": "Working on",
+    "glance.current": "Currently part-time",
+    "org.liverpool": "University of Liverpool",
+    "research.models": "Robotics Foundation Models",
+    "research.heading": "Robot intelligence for real industrial tasks",
+    "research.description": "My research centers on robotics foundation models and dexterous manipulation, with a focus on perception, learning, and manipulation for robots equipped with dexterous hands in real industrial settings. Guided by industrial tasks, I explore algorithms that connect visual perception with action generation and bring embodied intelligence into practical use.",
+    "research.numberModels": "01 / MODELS",
+    "research.numberEmbodiment": "02 / MANIPULATION",
+    "research.numberLearning": "03 / LEARNING",
+    "research.modelsDescription": "Connecting perception and task understanding with robot actions.",
+    "research.embodiment": "Dexterous Manipulation",
+    "research.embodimentDescription": "Coordinating robots and dexterous hands for industrial manipulation.",
+    "research.learning": "Robot Learning for Industry",
+    "research.learningDescription": "Validating and applying learning algorithms through real industrial tasks.",
+    "research.progress": "Research in progress",
+    "research.progressDescription": "I'll share research projects and publications here as they become available.",
+    "education.heading": "Academic background.",
+    "education.doctoral": "Doctoral studies",
+    "education.phd": "Doctor of Philosophy (Ph.D.)",
+    "education.phdSubject": "Electrical and Electronics Engineering",
+    "education.masters": "Master's degree",
+    "education.mres": "Master of Research (M.Res.)",
+    "education.mresSubject": "Pattern Recognition and Intelligent System",
+    "education.visitingType": "Visiting student",
+    "education.visitingRole": "Visiting Student",
+    "org.sustech": "Southern University of Science and Technology",
+    "education.bachelors": "Bachelor's degree",
+    "org.nanjingTech": "Nanjing Tech University",
+    "education.beng": "Bachelor of Engineering (B.Eng.)",
+    "education.bengSubject": "Mechanical Engineering",
+    "internships.heading": "Industry & research experience.",
+    "internships.type": "Internship",
+    "date.present": "Present",
+    "role.engineer": "Robotics Engineer",
+    "location.wuxi": "Wuxi, Jiangsu, China",
+    "location.shanghai": "Shanghai, China",
+    "location.suzhou": "Suzhou, Jiangsu, China",
+    "org.jitri": "Jiangsu Industrial Technology Research Institute",
+    "role.researcher": "Visual Algorithm Engineer",
+    "org.bosch": "Bosch China",
+    "role.automation": "Automation Engineer",
+    "footer.top": "Back to top ↑",
+    "footer.field": "Robotics & Embodied Intelligence",
+    "a11y.home": "Jiahui Zeng, back to top",
+    "a11y.navigation": "Main navigation",
+    "a11y.glance": "At a glance",
+    "a11y.topics": "Research topics",
+    "a11y.education": "Education history",
+    "a11y.internships": "Work experience",
+    "a11y.emails": "Email addresses",
+    "a11y.portrait": "Portrait of Jiahui Zeng",
+    "a11y.logo.liverpool": "University of Liverpool logo",
+    "a11y.logo.sustech": "Southern University of Science and Technology logo",
+    "a11y.logo.nanjingTech": "Nanjing Tech University logo",
+    "a11y.logo.jitri": "Jiangsu Industrial Technology Research Institute logo",
+    "a11y.logo.dexteroushands": "Dexteroushands logo",
+    "a11y.logo.infimaker": "InfiMaker logo",
+    "a11y.logo.bosch": "Bosch logo",
+    "meta.description": "Jiahui Zeng, a Ph.D. student at the University of Liverpool researching robotics foundation models and dexterous manipulation. Part-time Embodied Intelligence Algorithm Engineer at Dexteroushands, developing manipulation algorithms for robots with dexterous hands in industrial settings.",
+    "meta.socialDescription": "Ph.D. student at the University of Liverpool. Researching robotics foundation models and dexterous manipulation for real industrial tasks.",
+    "identity.name": "Jiahui Zeng",
+    "footer.copyright": "© 2026 Jiahui Zeng",
+    "experience.partTime": "Part-time",
+    "role.embodiedAlgorithm": "Embodied Intelligence Algorithm Engineer",
+    "research.focus": "Foundation Models & Dexterous Manipulation"
+  },
+  "zh": {
+    "language.label": "网站语言",
+    "education.current": "在读",
+    "internships.current": "在职",
+    "skip": "跳转到正文",
+    "nav.research": "研究方向",
+    "nav.education": "教育经历",
+    "nav.internships": "工作经历",
+    "nav.contact": "联系方式",
+    "hero.status": "博士研究生 · 利物浦大学",
+    "hero.explore": "了解我的研究",
+    "hero.intro": "我目前是\u003cstrong>利物浦大学\u003c/strong>的博士研究生，研究方向为\u003cstrong>机器人大模型与灵巧操作\u003c/strong>。同时，我以兼职形式在 \u003cstrong>Dexteroushands\u003c/strong> 担任\u003cstrong>具身智能算法工程师\u003c/strong>，结合机器人与灵巧手，开展面向真实工业场景的操作算法研究与应用落地。",
+    "glance.based": "就读院校",
+    "glance.research": "研究方向",
+    "glance.current": "目前兼职",
+    "org.liverpool": "利物浦大学",
+    "research.models": "机器人大模型",
+    "research.heading": "面向真实工业场景的机器人智能",
+    "research.description": "我的研究围绕机器人大模型与灵巧操作展开，关注机器人与灵巧手在真实工业环境中的感知、学习与操作。结合工业任务需求，探索从视觉感知到动作生成的算法方法，推动具身智能算法在实际作业场景中的验证与应用。",
+    "research.numberModels": "01 / 模型",
+    "research.numberEmbodiment": "02 / 操作",
+    "research.numberLearning": "03 / 学习",
+    "research.modelsDescription": "将感知与任务理解转化为机器人操作动作。",
+    "research.embodiment": "灵巧操作",
+    "research.embodimentDescription": "让机器人与灵巧手协同完成工业操作任务。",
+    "research.learning": "机器人学习与工业应用",
+    "research.learningDescription": "结合真实工业任务开展算法验证与应用。",
+    "research.progress": "研究进行中",
+    "research.progressDescription": "后续将在这里分享研究项目与论文成果。",
+    "education.heading": "教育背景",
+    "education.doctoral": "博士研究生",
+    "education.phd": "博士（Ph.D.）",
+    "education.phdSubject": "电气与电子工程",
+    "education.masters": "硕士",
+    "education.mres": "研究型硕士（M.Res.）",
+    "education.mresSubject": "模式识别与智能系统",
+    "education.visitingType": "访问学生",
+    "education.visitingRole": "访问学生",
+    "org.sustech": "南方科技大学",
+    "education.bachelors": "本科",
+    "org.nanjingTech": "南京工业大学",
+    "education.beng": "工学学士（B.Eng.）",
+    "education.bengSubject": "机械工程",
+    "internships.heading": "产业与科研经历",
+    "internships.type": "实习",
+    "date.present": "至今",
+    "role.engineer": "机器人工程师",
+    "location.wuxi": "中国江苏无锡",
+    "location.shanghai": "中国上海",
+    "location.suzhou": "中国江苏苏州",
+    "org.jitri": "江苏省产业技术研究院",
+    "role.researcher": "视觉算法工程师",
+    "org.bosch": "博世中国",
+    "role.automation": "自动化工程师",
+    "footer.top": "返回顶部 ↑",
+    "footer.field": "机器人与具身智能",
+    "a11y.home": "曾家辉，返回顶部",
+    "a11y.navigation": "主导航",
+    "a11y.glance": "个人概况",
+    "a11y.topics": "研究主题",
+    "a11y.education": "教育经历",
+    "a11y.internships": "工作经历",
+    "a11y.emails": "电子邮箱",
+    "a11y.portrait": "曾家辉的个人照片",
+    "a11y.logo.liverpool": "利物浦大学校徽",
+    "a11y.logo.sustech": "南方科技大学校徽",
+    "a11y.logo.nanjingTech": "南京工业大学校徽",
+    "a11y.logo.jitri": "江苏省产业技术研究院标志",
+    "a11y.logo.dexteroushands": "Dexteroushands 标志",
+    "a11y.logo.infimaker": "InfiMaker 标志",
+    "a11y.logo.bosch": "博世标志",
+    "meta.description": "曾家辉，利物浦大学博士研究生，研究方向为机器人大模型与灵巧操作。目前以兼职形式在 Dexteroushands 担任具身智能算法工程师，开展面向工业场景的机器人与灵巧手操作算法研究。",
+    "meta.socialDescription": "利物浦大学博士研究生，研究机器人大模型与灵巧操作，关注真实工业场景中的算法研究与应用。",
+    "identity.name": "曾家辉",
+    "footer.copyright": "© 2026 曾家辉",
+    "experience.partTime": "兼职",
+    "role.embodiedAlgorithm": "具身智能算法工程师",
+    "research.focus": "机器人大模型与灵巧操作"
+  }
+};
+      const storageKey = 'jiahui-zeng-language';
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const buttons = [...document.querySelectorAll('[data-language]')];
+      const normalize = value => value === 'zh' || value === 'zh-CN' ? 'zh' : value === 'en' ? 'en' : null;
+
+      function applyLanguage(language, saveChoice) {
+        const dictionary = messages[language];
+        document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          element.textContent = dictionary[element.dataset.i18n];
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(element => {
+          element.innerHTML = dictionary[element.dataset.i18nHtml];
+        });
+        for (const attribute of ['aria-label','alt','content']) {
+          document.querySelectorAll('[data-i18n-' + attribute + ']').forEach(element => {
+            element.setAttribute(attribute, dictionary[element.getAttribute('data-i18n-' + attribute)]);
+          });
+        }
+        document.querySelectorAll('time[datetime]').forEach(element => {
+          const [year, month] = element.getAttribute('datetime').split('-');
+          element.textContent = language === 'zh' ? year + '年' + Number(month) + '月' : months[Number(month) - 1] + ' ' + year;
+        });
+        buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
+        if (saveChoice) {
+          try { localStorage.setItem(storageKey, language); } catch {}
+          try {
+            const url = new URL(location.href);
+            url.searchParams.set('lang', language);
+            history.replaceState(null, '', url);
+          } catch {}
+        }
+      }
+
+      let savedLanguage;
+      try { savedLanguage = normalize(localStorage.getItem(storageKey)); } catch {}
+      const urlLanguage = normalize(new URL(location.href).searchParams.get('lang'));
+      applyLanguage(urlLanguage || savedLanguage || 'en', false);
+      buttons.forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.language, true)));
+    })();
+  </script>
 </body>
 </html>
