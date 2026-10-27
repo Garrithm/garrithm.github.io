@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta name="description" content="Garry (Jiahui Zeng / 曾家辉), a Ph.D. student at the University of Liverpool working on robotics foundation models. Currently interning at 灵掌.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Garry · Robotics & Embodied Intelligence">
+  <meta property="og:description" content="Ph.D. student at the University of Liverpool. Researching robotics foundation models.">
+  <meta property="og:url" content="https://garrithm.github.io/">
+  <title>Garry · Robotics & Embodied Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231a3648'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia' font-size='44' fill='white'%3EG%3C/text%3E%3C/svg%3E">
+  <style>
+    :root { --paper:#f7f8fa; --ink:#192d3a; --muted:#5b6c78; --line:#dfe5e9; --blue:#245e98; --orange:#d47844; --serif:Georgia,"Times New Roman",serif; --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif; --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:96px; }
+    body { margin:0; font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.7; -webkit-font-smoothing:antialiased; }
+    ::selection { color:var(--ink); background:#dce8f3; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
+    .container { width:min(1120px,calc(100% - 80px)); margin-inline:auto; }
+    .skip-link { position:absolute; left:20px; top:-80px; background:var(--ink); color:white; padding:8px 16px; z-index:20; }
+    .skip-link:focus { top:12px; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+    .site-header { position:sticky; top:0; z-index:10; border-bottom:1px solid var(--line); background:rgba(247,248,250,.96); backdrop-filter:blur(14px); }
+    .header-inner { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .wordmark { display:inline-flex; align-items:center; gap:11px; font-size:13px; font-weight:650; letter-spacing:.09em; }
+    .logo { display:grid; place-items:center; width:32px; height:32px; border:1px solid #a8b7c1; border-radius:50%; font-family:var(--serif); font-size:23px; font-weight:400; letter-spacing:0; }
+    .navigation { display:flex; align-items:center; gap:28px; font-size:13px; color:var(--muted); }
+    .navigation a:hover { color:var(--blue); }
+    .navigation .nav-github { color:var(--ink); border-left:1px solid #ccd6dd; padding-left:28px; display:flex; align-items:center; gap:7px; }
+    .arrow { display:inline-block; font-size:17px; line-height:1; }
+    .hero { display:grid; grid-template-columns:1.08fr 1fr; align-items:center; gap:46px; padding:74px 0 66px; }
+    .eyebrow,.section-index { font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; }
+    .eyebrow { display:flex; align-items:center; gap:9px; color:var(--blue); margin:0 0 23px; }
+    .status-dot { width:6px; height:6px; flex-shrink:0; border-radius:50%; background:var(--blue); box-shadow:0 0 0 4px #e4ebf1; }
+    h1 { margin:0; font-family:var(--serif); font-weight:400; font-size:clamp(62px,6.8vw,88px); letter-spacing:-.055em; line-height:1.05; }
+    .chinese-name { display:inline-block; margin-left:17px; font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:22px; font-weight:400; letter-spacing:.1em; vertical-align:middle; color:var(--muted); }
+    .full-name { margin:15px 0 24px; font-family:var(--mono); color:var(--muted); font-size:12px; letter-spacing:.08em; }
+    .hero-lead { margin:0 0 21px; font-size:28px; font-weight:450; letter-spacing:-.035em; line-height:1.4; max-width:440px; }
+    .hero-lead em { font-style:normal; color:var(--blue); }
+    .intro { max-width:480px; margin:0; font-size:15px; color:var(--muted); line-height:1.9; }
+    .intro strong { color:var(--ink); font-weight:550; }
+    .inline-link { text-decoration:underline; text-decoration-color:#b0c1ce; text-underline-offset:4px; }
+    .inline-link:hover { color:var(--blue); }
+    .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:26px; margin-top:30px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:19px; padding:11px 18px; font-size:12px; font-weight:550; border-radius:4px; background:var(--ink); color:white; transition:background .15s,transform .15s; }
+    .button:hover { background:var(--blue); transform:translateY(-1px); }
+    .text-button { display:inline-flex; align-items:center; gap:8px; font-size:12px; border-bottom:1px solid #c1cbd3; padding-bottom:2px; }
+    .text-button:hover { color:var(--blue); border-color:var(--blue); }
+    .hero-figure { position:relative; margin:0; padding:20px 22px 15px; border:1px solid var(--line); background:#f0f3f6; border-radius:5px; overflow:hidden; }
+    .figure-top { display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); color:#5b6d7c; font-size:9px; letter-spacing:.08em; }
+    .figure-top .figure-cross { font-size:19px; font-weight:300; line-height:1; color:#8b9ba8; }
+    .robot-art { display:block; width:100%; height:auto; margin:3px 0 0; }
+    figcaption { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:10px; color:var(--muted); border-top:1px solid #d9e1e8; padding-top:12px; }
+    figcaption .caption-label { font-family:var(--mono); text-transform:uppercase; font-size:9px; letter-spacing:.05em; }
+    .affiliation-strip { display:grid; grid-template-columns:1.35fr 1.1fr 1fr; gap:24px; padding:24px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .affiliation { padding-left:24px; border-left:1px solid var(--line); }
+    .affiliation:first-child { padding-left:0; border:0; }
+    .small-label { display:block; font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+    .affiliation p { margin:0; font-size:13px; }
+    .affiliation p span { color:var(--muted); }
+    .page-section { display:grid; grid-template-columns:190px 1fr; gap:30px; padding:62px 0; border-bottom:1px solid var(--line); }
+    .section-index { color:var(--muted); padding-top:8px; margin:0; }
+    .section-index span { color:#97a6b2; margin-right:13px; }
+    h2 { font-family:var(--serif); font-size:35px; font-weight:400; letter-spacing:-.035em; line-height:1.3; margin:0 0 19px; }
+    .section-copy { max-width:700px; color:var(--muted); font-size:15px; margin:0; line-height:1.95; }
+    .topic-list { display:flex; flex-wrap:wrap; gap:9px; margin:25px 0 0; padding:0; list-style:none; }
+    .topic-list li { font-size:11px; border:1px solid #d8e1e8; border-radius:3px; padding:5px 11px; color:#37536a; background:#f0f4f7; }
+    .research-note { display:flex; align-items:flex-start; gap:15px; margin-top:29px; padding:19px 21px; background:white; border:1px solid var(--line); border-radius:4px; }
+    .note-symbol { font-family:var(--serif); font-size:24px; line-height:1.4; color:var(--orange); }
+    .research-note h3 { font-size:12px; font-weight:550; margin:0 0 4px; }
+    .research-note p { color:var(--muted); font-size:12px; margin:0; line-height:1.8; }
+    .timeline { list-style:none; padding:0; margin:4px 0 0; }
+    .timeline li { display:grid; grid-template-columns:125px 1fr; gap:22px; padding:22px 0; border-bottom:1px solid var(--line); }
+    .timeline li:first-child { padding-top:0; }
+    .timeline li:last-child { border:0; padding-bottom:0; }
+    .timeline-role { padding-top:3px; color:var(--muted); font-family:var(--mono); font-size:10px; letter-spacing:.03em; }
+    .timeline h3 { margin:0; font-size:16px; font-weight:550; letter-spacing:-.015em; }
+    .timeline p { margin:5px 0 0; font-size:13px; color:var(--muted); }
+    .current-tag { display:inline-block; font-size:9px; font-weight:400; color:var(--blue); border:1px solid #ccdae5; border-radius:3px; padding:1px 6px; vertical-align:middle; margin-left:7px; }
+    .contact-section { border-bottom:0; padding-bottom:64px; }
+    .contact-layout { display:flex; justify-content:space-between; align-items:center; gap:32px; }
+    .contact-layout h2 { margin-bottom:12px; }
+    .contact-layout p { margin:0; color:var(--muted); font-size:14px; }
+    .contact-layout .button { white-space:nowrap; }
+    .site-footer { border-top:1px solid var(--line); }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; padding:23px 0; color:var(--muted); font-size:10px; }
+    .footer-inner a:hover { color:var(--blue); }
+    @media (min-width:1400px) { .hero { padding-top:86px; padding-bottom:78px; } }
+    @media (max-width:950px) { .container { width:calc(100% - 48px); } .hero { gap:30px; padding:53px 0; } h1 { font-size:68px; } .chinese-name { font-size:17px; margin-left:12px; } .hero-lead { font-size:24px; } .page-section { grid-template-columns:145px 1fr; gap:20px; } .contact-layout { align-items:flex-start; flex-direction:column; gap:22px; } }
+    @media (max-width:700px) {
+      html { scroll-padding-top:85px; } .container { width:calc(100% - 40px); } .header-inner { min-height:68px; gap:15px; }
+      .wordmark { font-size:11px; gap:8px; } .logo { width:27px; height:27px; font-size:20px; }
+      .navigation { gap:17px; font-size:11px; } .navigation .nav-github { padding-left:0; border:0; } .nav-github .github-word { display:none; }
+      .hero { grid-template-columns:1fr; padding:44px 0 35px; gap:35px; } .eyebrow { font-size:10px; margin-bottom:21px; }
+      h1 { font-size:72px; } .chinese-name { font-size:20px; margin-left:17px; } .full-name { margin-top:14px; margin-bottom:23px; }
+      .hero-lead { font-size:27px; max-width:440px; } .intro { font-size:14px; } .hero-actions { margin-top:25px; }
+      .hero-figure { max-width:480px; width:100%; justify-self:center; padding:18px 20px 13px; } .robot-art { max-height:330px; }
+      .affiliation-strip { grid-template-columns:1fr; gap:14px; padding:22px 0; } .affiliation,.affiliation:first-child { display:grid; grid-template-columns:105px 1fr; align-items:baseline; gap:8px; padding:0; border:0; } .small-label { margin:0; font-size:8px; } .affiliation p { font-size:12px; }
+      .page-section { grid-template-columns:1fr; gap:20px; padding:37px 0; } .section-index { padding:0; font-size:10px; } h2 { font-size:31px; }
+      .section-copy { font-size:14px; } .research-note { padding:17px; margin-top:23px; } .topic-list { gap:7px; } .topic-list li { font-size:10px; }
+      .timeline li { grid-template-columns:93px 1fr; gap:16px; padding:19px 0; } .timeline-role { font-size:9px; } .timeline h3 { font-size:14px; } .timeline p { font-size:12px; }
+      .contact-section { padding-bottom:43px; } .footer-inner { font-size:9px; }
+    }
+    @media (max-width:360px) { .navigation { gap:11px; } .wordmark { font-size:10px; } .hero-actions { gap:20px; } h1 { font-size:63px; } .chinese-name { font-size:17px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#main" aria-label="Garry, back to top"><span class="logo" aria-hidden="true">g</span>GARRY</a>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#research">Research</a><a href="#background">Background</a><a href="#contact">Contact</a>
+        <a class="nav-github" href="https://github.com/Garrithm"><span class="github-word">GitHub</span><span class="arrow" aria-hidden="true">↗</span><span class="sr-only">GitHub profile</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="name">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Ph.D. Student · University of Liverpool</p>
+        <h1 id="name">Garry<span class="chinese-name" lang="zh-CN">曾家辉</span></h1>
+        <p class="full-name">JIAHUI ZENG / GARRITHM</p>
+        <p class="hero-lead">Robotics, language,<br>and the <em>physical world.</em></p>
+        <p class="intro">I'm a Ph.D. student at the <a class="inline-link" href="https://www.liverpool.ac.uk/">University of Liverpool</a>, working on <strong>robotics foundation models</strong>. I'm currently interning at <strong lang="zh-CN">灵掌</strong>, exploring intelligence for robots in the real world.</p>
+        <div class="hero-actions"><a class="button" href="#research">Explore my research <span class="arrow" aria-hidden="true">↓</span></a><a class="text-button" href="https://github.com/Garrithm">GitHub <span class="arrow" aria-hidden="true">↗</span></a></div>
+      </div>
+      <figure class="hero-figure">
+        <div class="figure-top"><span>EMBODIED INTELLIGENCE</span><span class="figure-cross" aria-hidden="true">+</span></div>
+        <svg class="robot-art" viewBox="0 0 500 402" role="img" aria-labelledby="robot-title robot-desc" xmlns="http://www.w3.org/2000/svg">
+          <title id="robot-title">A robotic arm reaching toward an object</title>
+          <desc id="robot-desc">An original technical illustration of a robotic manipulator and an orange cube, representing robotics and interaction with the physical world.</desc>
+          <defs>
+            <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#cad4de"/></pattern>
+            <linearGradient id="arm-surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7fafc"/><stop offset=".48" stop-color="#dce5ed"/><stop offset="1" stop-color="#b5c4d0"/></linearGradient>
+            <linearGradient id="base-surface" x1="0" x2="1"><stop stop-color="#d6e0e8"/><stop offset=".5" stop-color="#f2f6fa"/><stop offset="1" stop-color="#a5b7c6"/></linearGradient>
+            <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+          </defs>
+          <rect x="0" y="0" width="500" height="402" fill="url(#dots)"/>
+          <ellipse cx="268" cy="340" rx="171" ry="44" fill="none" stroke="#d5dfe7"/><ellipse cx="268" cy="340" rx="114" ry="29" fill="none" stroke="#d5dfe7"/>
+          <path d="M52 342H463 M248 287V390" fill="none" stroke="#dce3ea"/>
+          <path d="M160 252C73 109 189 49 307 82C380 102 420 153 419 223" fill="none" stroke="#a9bccd" stroke-width="1.2" stroke-dasharray="4 6"/><path d="m414 218 5 7 5-7" fill="none" stroke="#a9bccd" stroke-width="1.2"/>
+          <ellipse cx="238" cy="342" rx="70" ry="13" fill="#93a5b5" opacity=".26" filter="url(#shadow)"/>
+          <ellipse cx="235" cy="333" rx="53" ry="15" fill="#839bad"/>
+          <path d="M183 323v10c0 20 104 20 104 0v-10" fill="#b3c4d2" stroke="#8ea5b8" stroke-width="1.2"/><ellipse cx="235" cy="322" rx="52" ry="14" fill="#e6edf3" stroke="#96adbf" stroke-width="1.2"/>
+          <path d="M204 319v-31c0-15 62-15 62 0v31c-15 11-47 11-62 0Z" fill="url(#base-surface)" stroke="#91a9bb" stroke-width="1.5"/><ellipse cx="235" cy="288" rx="31" ry="10" fill="#e5edf3" stroke="#91a9bb" stroke-width="1.5"/>
+          <path d="M235 284 178 191" stroke="#7b93a6" stroke-width="47" stroke-linecap="round"/><path d="M235 280 178 191" stroke="url(#arm-surface)" stroke-width="39" stroke-linecap="round"/><path d="m223 267-36-61" stroke="#f9fcfe" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="178" cy="191" r="29" fill="#b1c3d1" stroke="#7d96aa" stroke-width="1.5"/><circle cx="178" cy="191" r="21" fill="#e1eaf1" stroke="#98afc1" stroke-width="1.5"/><circle cx="178" cy="191" r="10" fill="#627e95"/><circle cx="178" cy="191" r="4" fill="#d1e0eb"/>
+          <path d="m193 177 111-79" stroke="#7b93a6" stroke-width="38" stroke-linecap="round"/><path d="m193 177 111-79" stroke="url(#arm-surface)" stroke-width="31" stroke-linecap="round"/><path d="m205 174 88-63" stroke="#f8fbfd" stroke-width="4" stroke-linecap="round"/><path d="m189 163 102-73" stroke="#9db1c1" stroke-width="2"/>
+          <circle cx="307" cy="96" r="24" fill="#aabfce" stroke="#7d96aa" stroke-width="1.5"/><circle cx="307" cy="96" r="16" fill="#e0eaf2" stroke="#96aebe" stroke-width="1.5"/><circle cx="307" cy="96" r="7" fill="#627e95"/>
+          <path d="m322 109 43 54" stroke="#7691a7" stroke-width="29" stroke-linecap="round"/><path d="m322 109 43 54" stroke="url(#arm-surface)" stroke-width="22" stroke-linecap="round"/><path d="m328 112 33 42" stroke="#f8fbfd" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="367" cy="166" r="17" fill="#d4e1eb" stroke="#829db2" stroke-width="2"/><circle cx="367" cy="166" r="7" fill="#5d7a91"/>
+          <path d="m373 177 10 14" stroke="#6c879d" stroke-width="12"/><path d="m371 191 14-10 14 16-5 6-10-10-5 4 5 13-6 4Z" fill="#607e95" stroke="#506f86" stroke-width="1"/><path d="m387 192 8-4 14 17-4 15-7-2 3-10Z" fill="#829eb3" stroke="#607e95" stroke-width="1"/>
+          <path d="M383 225v39" stroke="#cf9b77" stroke-width="1" stroke-dasharray="3 4"/><ellipse cx="382" cy="326" rx="34" ry="10" fill="#d8c5b7" opacity=".5"/>
+          <path d="m356 283 27-16 27 16-27 16Z" fill="#e9b38b" stroke="#bb7a4c" stroke-width="1.2"/><path d="m356 283 27 16v32l-27-16Z" fill="#ce8859" stroke="#bb7a4c" stroke-width="1.2"/><path d="m383 299 27-16v32l-27 16Z" fill="#e0a174" stroke="#bb7a4c" stroke-width="1.2"/>
+          <path d="M100 192h43 M100 192v33 M311 48v20 M311 48h38 M425 286h26" stroke="#9caebd" stroke-width="1" fill="none"/>
+          <g fill="#768c9e" font-family="Consolas,monospace" font-size="8" letter-spacing=".6"><text x="100" y="238">ACT</text><text x="355" y="51">REASON</text><text x="431" y="301">WORLD</text></g><g stroke="#a5b7c6" stroke-width="1"><path d="M31 32h10m-5-5v10 M455 356h10m-5-5v10"/></g>
+        </svg>
+        <figcaption><span>From foundation models to physical action.</span><span class="caption-label">Robotics / Illustration</span></figcaption>
+      </figure>
+    </section>
+    <div class="affiliation-strip" aria-label="At a glance">
+      <div class="affiliation"><span class="small-label">Based at</span><p>University of Liverpool</p></div>
+      <div class="affiliation"><span class="small-label">Working on</span><p>Robotics Foundation Models</p></div>
+      <div class="affiliation"><span class="small-label">Currently</span><p>Intern <span>at</span> <span lang="zh-CN">灵掌</span></p></div>
+    </div>
+    <section id="research" class="page-section" aria-labelledby="research-heading">
+      <p class="section-index"><span>01</span>Research</p>
+      <div>
+        <h2 id="research-heading">Intelligence that meets the world.</h2>
+        <p class="section-copy">My research focuses on foundation models for robotics: connecting the capabilities of large models with robots that interact with the physical world. I'm interested in the path from understanding to action, and how intelligent models can become useful in embodied systems.</p>
+        <ul class="topic-list" aria-label="Research topics"><li>Robotics Foundation Models</li><li>Embodied Intelligence</li><li>Robot Learning</li></ul>
+        <div class="research-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h3>Research in progress</h3><p>I'll share research projects and publications here as they become available. In the meantime, you can find me on <a class="inline-link" href="https://github.com/Garrithm">GitHub</a>.</p></div></div>
+      </div>
+    </section>
+    <section id="background" class="page-section" aria-labelledby="background-heading">
+      <p class="section-index"><span>02</span>Background</p>
+      <div>
+        <h2 id="background-heading">A little about my journey.</h2>
+        <!-- Add dates, degree subjects, and laboratory details when available. -->
+        <ol class="timeline">
+          <li><span class="timeline-role">Ph.D. · Ongoing</span><div><h3>University of Liverpool <span class="current-tag">Current</span></h3><p>Doctoral studies · Robotics foundation models</p></div></li>
+          <li><span class="timeline-role">Internship</span><div><h3 lang="zh-CN">灵掌 <span class="current-tag" lang="en">Current</span></h3><p>Working on robotics foundation models</p></div></li>
+          <li><span class="timeline-role">Master's</span><div><h3>University of Liverpool</h3><p>Master's degree</p></div></li>
+          <li><span class="timeline-role">Bachelor's</span><div><h3>Nanjing Tech University</h3><p>Bachelor's degree</p></div></li>
+        </ol>
+      </div>
+    </section>
+    <section id="contact" class="page-section contact-section" aria-labelledby="contact-heading">
+      <p class="section-index"><span>03</span>Get in touch</p>
+      <div class="contact-layout"><div><h2 id="contact-heading">Let's talk robotics.</h2><p>Always happy to connect over research, ideas, and robots.</p></div><a class="button" href="https://github.com/Garrithm">Find me on GitHub <span class="arrow" aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Garry · 曾家辉</span><span>Robotics &amp; Embodied Intelligence <span aria-hidden="true">/</span> <a href="#main">Back to top ↑</a></span></div></footer>
+</body>
+</html>
