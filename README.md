@@ -6,7 +6,7 @@ Website: [garrithm.github.io](https://garrithm.github.io/)
 
 ## Update the website
 
-Edit `index.html` and commit to `main`. The page is self-contained, with responsive CSS and an original inline SVG illustration. There is no build step and no external asset dependency.
+Edit `index.html` and commit to `main`. The page uses responsive CSS, an original inline SVG illustration, and local organization logos in `assets/logos/`. Keep the `assets/` directory alongside `index.html` when copying or publishing the site. There is no build step and no external asset dependency.
 
 - Introduction: `.hero-copy`
 - Research: `#research`
