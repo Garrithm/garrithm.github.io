@@ -85,11 +85,12 @@
     .education-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
     .timeline > li { position:relative; display:grid; grid-template-columns:64px minmax(0,1fr); align-items:start; gap:18px; padding:24px; background:white; border:1px solid var(--line); border-top:3px solid var(--brand,#365baa); border-radius:12px; box-shadow:0 7px 24px -19px #344768; transition:transform .2s,box-shadow .2s; }
     .timeline > li:hover { transform:translateY(-3px); box-shadow:0 12px 26px -19px #344768; }
-    .org-logo { display:grid; place-items:center; width:64px; height:70px; padding:9px; background:white; border:1px solid #edf0f4; border-radius:10px; }
-    .org-logo img { display:block; max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; }
-    .internship-list > li { grid-template-columns:94px minmax(0,1fr); gap:24px; padding:26px; }
-    .internship-list .org-logo { width:94px; height:82px; padding:12px; }
-    .org-logo.wordmark { padding:8px; }
+    .org-logo { display:flex; align-items:center; justify-content:center; width:64px; height:78px; padding:8px; background:white; border:1px solid #edf0f4; border-radius:10px; }
+    .org-logo img { display:block; width:100%; height:100%; min-width:0; min-height:0; object-fit:contain; }
+    .internship-list > li { grid-template-columns:140px minmax(0,1fr); gap:24px; padding:26px; }
+    .internship-list .org-logo { width:140px; height:84px; padding:12px; }
+    .org-logo.logo-wide { padding:10px; }
+    .org-logo.logo-dark { background:#050607; border-color:#050607; }
     .entry-topline { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:0 0 8px; }
     .entry-type { font-family:var(--mono); color:var(--brand,#365baa); font-size:10px; letter-spacing:.05em; text-transform:uppercase; }
     .timeline-date { margin-top:15px; padding-top:12px; border-top:1px solid #edf0f5; color:var(--muted); font-family:var(--mono); font-size:10px; line-height:1.8; }
@@ -125,7 +126,7 @@
       .affiliation-strip { grid-template-columns:1fr; gap:10px; padding:0 0 30px; } .affiliation { padding:14px 17px; gap:13px; } .affiliation-icon { width:45px; } .affiliation-icon.wide { width:70px; } .small-label { margin:0 0 3px; font-size:8px; } .affiliation p { font-size:12px; }
       .page-section { grid-template-columns:1fr; gap:20px; padding:37px 0; } .section-index { padding:0; font-size:10px; } h2 { font-size:31px; }
       .section-copy { font-size:14px; } .research-note { padding:17px; margin-top:18px; } .topic-list { grid-template-columns:1fr; gap:10px; } .topic-list li { padding:16px 18px; } .topic-number { float:right; margin-bottom:0; } .topic-list strong { max-width:85%; } .topic-list p { margin-top:4px; }
-      .timeline { gap:13px; margin-top:21px; } .timeline > li { grid-template-columns:52px minmax(0,1fr); gap:13px; padding:19px 16px; } .org-logo,.internship-list .org-logo { width:52px; height:60px; padding:6px; border-radius:8px; } .org-logo.wordmark { padding:3px; } .timeline h3 { font-size:15px; } .timeline p { font-size:12px; } .timeline-date { font-size:9px; } .entry-topline { gap:7px; margin-bottom:7px; } .entry-topline .timeline-date { margin-left:0; width:100%; } .timeline .skill-list li { padding:3px 7px; font-size:9px; } .contact-layout { padding:23px; }
+      .timeline { gap:13px; margin-top:21px; } .timeline > li { grid-template-columns:52px minmax(0,1fr); gap:13px; padding:19px 16px; } .org-logo { width:52px; height:64px; padding:6px; border-radius:8px; } .internship-list > li { grid-template-columns:1fr; gap:16px; } .internship-list .org-logo { width:140px; height:68px; padding:10px; } .timeline h3 { font-size:15px; } .timeline p { font-size:12px; } .timeline-date { font-size:9px; } .entry-topline { gap:7px; margin-bottom:7px; } .entry-topline .timeline-date { margin-left:0; width:100%; } .timeline .skill-list li { padding:3px 7px; font-size:9px; } .contact-layout { padding:23px; }
       .contact-section { padding-bottom:43px; } .footer-inner { font-size:9px; }
     }
     @media (max-width:360px) { .navigation { gap:11px; } .wordmark { font-size:10px; } .hero-actions { gap:20px; } h1 { font-size:63px; } .chinese-name { font-size:17px; } }
@@ -188,9 +189,9 @@
       </figure>
     </section>
     <div class="affiliation-strip" aria-label="At a glance">
-      <div class="affiliation"><span class="affiliation-icon image"><img src="assets/logos/liverpool.png" width="32" height="34" alt=""></span><div><span class="small-label">Based at</span><p>University of Liverpool</p></div></div>
+      <div class="affiliation"><span class="affiliation-icon image"><img src="assets/logos/liverpool.png?v=0b1c3a92" width="107" height="162" alt=""></span><div><span class="small-label">Based at</span><p>University of Liverpool</p></div></div>
       <div class="affiliation"><span class="affiliation-icon" aria-hidden="true">⌘</span><div><span class="small-label">Working on</span><p>Robotics Foundation Models</p></div></div>
-      <div class="affiliation"><span class="affiliation-icon image wide"><img src="assets/logos/dexteroushands.png" width="70" height="38" alt=""></span><div><span class="small-label">Currently</span><p>Robotics Engineer Intern</p></div></div>
+      <div class="affiliation"><span class="affiliation-icon image wide"><img src="assets/logos/dexteroushands.png?v=346f2f8f" width="1000" height="246" alt="Dexteroushands"></span><div><span class="small-label">Currently</span><p>Robotics Engineer Intern</p></div></div>
     </div>
     <section id="research" class="page-section" aria-labelledby="research-heading">
       <p class="section-index"><span>01</span>Research</p>
@@ -207,19 +208,19 @@
         <h2 id="education-heading">Academic background.</h2>
         <ol class="timeline education-list" aria-label="Education history">
           <li style="--brand:#283568">
-            <div class="org-logo"><img src="assets/logos/liverpool.png" alt="University of Liverpool logo" width="87" height="130" loading="lazy"></div>
+            <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" width="107" height="162" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Doctoral studies</span><span class="current-tag">Current</span></div><h3>University of Liverpool</h3><p class="position">Doctor of Philosophy (Ph.D.)</p><p>Electrical and Electronics Engineering</p><div class="timeline-date"><time datetime="2025-09">Sep 2025</time> – <time datetime="2029-06">Jun 2029</time><span class="date-note">Expected completion</span></div></div>
           </li>
           <li style="--brand:#283568">
-            <div class="org-logo"><img src="assets/logos/liverpool.png" alt="University of Liverpool logo" width="87" height="130" loading="lazy"></div>
+            <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" width="107" height="162" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Master's degree</span></div><h3>University of Liverpool</h3><p class="position">Master of Research (M.Res.)</p><p>Pattern Recognition and Intelligent System</p><div class="timeline-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-04">Apr 2025</time></div></div>
           </li>
           <li style="--brand:#d99737">
-            <div class="org-logo"><img src="assets/logos/sustech.png" alt="Southern University of Science and Technology logo" width="134" height="134" loading="lazy"></div>
+            <div class="org-logo"><img src="assets/logos/sustech.png?v=8e54a0ee" alt="Southern University of Science and Technology logo" width="383" height="383" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Visiting student</span></div><h3>Southern University of Science and Technology</h3><p class="position">Visiting Student</p><div class="timeline-date"><time datetime="2024-10">Oct 2024</time> – <time datetime="2024-12">Dec 2024</time></div></div>
           </li>
           <li style="--brand:#169ac3">
-            <div class="org-logo"><img src="assets/logos/nanjing-tech.png" alt="Nanjing Tech University logo" width="112" height="133" loading="lazy"></div>
+            <div class="org-logo"><img src="assets/logos/nanjing-tech.png?v=ec2b9ad4" alt="Nanjing Tech University logo" width="838" height="1000" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Bachelor's degree</span></div><h3>Nanjing Tech University</h3><p class="position">Bachelor of Engineering (B.Eng.)</p><p>Mechanical Engineering</p><div class="timeline-date"><time datetime="2019-09">Sep 2019</time> – <time datetime="2023-06">Jun 2023</time></div></div>
           </li>
         </ol>
@@ -231,19 +232,19 @@
         <h2 id="internships-heading">Industry &amp; research experience.</h2>
         <ol class="timeline internship-list" aria-label="Internship history">
           <li style="--brand:#279b9a">
-            <div class="org-logo wordmark"><img src="assets/logos/dexteroushands.png" alt="Dexteroushands logo" width="135" height="34" loading="lazy"></div>
+            <div class="org-logo logo-wide"><img src="assets/logos/dexteroushands.png?v=346f2f8f" alt="Dexteroushands logo" width="1000" height="246" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Internship</span><span class="current-tag">Current</span><div class="timeline-date"><time datetime="2025-05">May 2025</time> – Present</div></div><h3>Dexteroushands</h3><p class="position">Robotics Engineer</p><p>Wuxi Dexteroushands Robotic Technology Co.</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><p class="entry-note">Working on robotics foundation models.</p><ul class="skill-list" aria-label="Skills at Dexteroushands"><li>Visual Perception</li><li>Robotics</li></ul></div>
           </li>
           <li style="--brand:#f58b1c">
-            <div class="org-logo"><img src="assets/logos/infimaker.png" alt="InfiMaker logo" width="144" height="143" loading="lazy"></div>
+            <div class="org-logo logo-wide logo-dark"><img src="assets/logos/infimaker.png?v=d68e2eed" alt="InfiMaker logo" width="234" height="48" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2024-12">Dec 2024</time> – <time datetime="2025-05">May 2025</time></div></div><h3>InfiMaker</h3><p class="position">Robotics Engineer</p><p class="entry-meta">Shanghai, China · On-site</p><ul class="skill-list" aria-label="Skills at InfiMaker"><li>Visual Perception</li><li>Camera Calibration</li></ul></div>
           </li>
           <li style="--brand:#339b8a">
-            <div class="org-logo"><img src="assets/logos/jitri.png" alt="JITRI logo" width="110" height="119" loading="lazy"></div>
+            <div class="org-logo"><img src="assets/logos/jitri.png?v=e6b3a495" alt="JITRI logo" width="94" height="115" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2024-01">Jan 2024</time> – <time datetime="2024-10">Oct 2024</time></div></div><h3>JITRI</h3><p class="position">Researcher</p><p>Jiangsu Industrial Technology Research Institute</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><p class="entry-note">Joint Master's Program Institution</p><ul class="skill-list" aria-label="Skills at JITRI"><li>Computer Vision</li><li>Deep Learning</li></ul></div>
           </li>
           <li style="--brand:#b83f4e">
-            <div class="org-logo"><img src="assets/logos/bosch.png" alt="Bosch logo" width="102" height="102" loading="lazy"></div>
+            <div class="org-logo logo-wide"><img src="assets/logos/bosch.png?v=c72ac9c1" alt="Bosch logo" width="773" height="193" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2023-04">Apr 2023</time> – <time datetime="2023-09">Sep 2023</time></div></div><h3>Bosch China</h3><p class="position">Automation Engineer</p><p class="entry-meta">Suzhou, Jiangsu, China · On-site</p><ul class="skill-list" aria-label="Skills at Bosch"><li>Machine Vision</li><li>Beckhoff TwinCAT</li></ul></div>
           </li>
         </ol>
