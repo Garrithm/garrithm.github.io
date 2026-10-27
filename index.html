@@ -73,12 +73,18 @@
     .research-note h3 { font-size:12px; font-weight:550; margin:0 0 4px; }
     .research-note p { color:var(--muted); font-size:12px; margin:0; line-height:1.8; }
     .timeline { list-style:none; padding:0; margin:4px 0 0; }
-    .timeline li { display:grid; grid-template-columns:125px 1fr; gap:22px; padding:22px 0; border-bottom:1px solid var(--line); }
+    .timeline li { display:grid; grid-template-columns:160px minmax(0,1fr); gap:24px; padding:25px 0; border-bottom:1px solid var(--line); }
     .timeline li:first-child { padding-top:0; }
     .timeline li:last-child { border:0; padding-bottom:0; }
-    .timeline-role { padding-top:3px; color:var(--muted); font-family:var(--mono); font-size:10px; letter-spacing:.03em; }
+    .timeline-date { padding-top:3px; color:var(--muted); font-family:var(--mono); font-size:10px; line-height:1.8; }
+    .timeline-date .date-note { display:block; color:#738591; font-family:var(--sans); font-size:10px; }
     .timeline h3 { margin:0; font-size:16px; font-weight:550; letter-spacing:-.015em; }
     .timeline p { margin:5px 0 0; font-size:13px; color:var(--muted); }
+    .timeline .position { color:var(--ink); }
+    .timeline .entry-meta { margin-top:7px; font-size:11px; }
+    .timeline .entry-note { font-size:12px; }
+    .skill-list { display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0; margin:12px 0 0; }
+    .timeline .skill-list li { display:block; padding:3px 8px; border:1px solid #dce4ea; border-radius:3px; background:#f0f4f7; color:#466074; font-size:10px; }
     .current-tag { display:inline-block; font-size:9px; font-weight:400; color:var(--blue); border:1px solid #ccdae5; border-radius:3px; padding:1px 6px; vertical-align:middle; margin-left:7px; }
     .contact-section { border-bottom:0; padding-bottom:64px; }
     .contact-layout { display:flex; justify-content:space-between; align-items:center; gap:32px; }
@@ -91,9 +97,9 @@
     @media (min-width:1400px) { .hero { padding-top:86px; padding-bottom:78px; } }
     @media (max-width:950px) { .container { width:calc(100% - 48px); } .hero { gap:30px; padding:53px 0; } h1 { font-size:68px; } .chinese-name { font-size:17px; margin-left:12px; } .hero-lead { font-size:24px; } .page-section { grid-template-columns:145px 1fr; gap:20px; } .contact-layout { align-items:flex-start; flex-direction:column; gap:22px; } }
     @media (max-width:700px) {
-      html { scroll-padding-top:85px; } .container { width:calc(100% - 40px); } .header-inner { min-height:68px; gap:15px; }
+      html { scroll-padding-top:114px; } .container { width:calc(100% - 40px); } .header-inner { min-height:90px; flex-wrap:wrap; padding:12px 0 10px; gap:8px; }
       .wordmark { font-size:11px; gap:8px; } .logo { width:27px; height:27px; font-size:20px; }
-      .navigation { gap:17px; font-size:11px; } .navigation .nav-github { padding-left:0; border:0; } .nav-github .github-word { display:none; }
+      .navigation { width:100%; justify-content:space-between; gap:10px; font-size:11px; } .navigation .nav-github { padding-left:0; border:0; } .nav-github .github-word { display:none; }
       .hero { grid-template-columns:1fr; padding:44px 0 35px; gap:35px; } .eyebrow { font-size:10px; margin-bottom:21px; }
       h1 { font-size:72px; } .chinese-name { font-size:20px; margin-left:17px; } .full-name { margin-top:14px; margin-bottom:23px; }
       .hero-lead { font-size:27px; max-width:440px; } .intro { font-size:14px; } .hero-actions { margin-top:25px; }
@@ -101,7 +107,7 @@
       .affiliation-strip { grid-template-columns:1fr; gap:14px; padding:22px 0; } .affiliation,.affiliation:first-child { display:grid; grid-template-columns:105px 1fr; align-items:baseline; gap:8px; padding:0; border:0; } .small-label { margin:0; font-size:8px; } .affiliation p { font-size:12px; }
       .page-section { grid-template-columns:1fr; gap:20px; padding:37px 0; } .section-index { padding:0; font-size:10px; } h2 { font-size:31px; }
       .section-copy { font-size:14px; } .research-note { padding:17px; margin-top:23px; } .topic-list { gap:7px; } .topic-list li { font-size:10px; }
-      .timeline li { grid-template-columns:93px 1fr; gap:16px; padding:19px 0; } .timeline-role { font-size:9px; } .timeline h3 { font-size:14px; } .timeline p { font-size:12px; }
+      .timeline li { grid-template-columns:1fr; gap:8px; padding:23px 0; } .timeline-date { padding-top:0; font-size:10px; } .timeline-date .date-note { display:inline; margin-left:8px; } .timeline h3 { font-size:15px; } .timeline p { font-size:12px; } .timeline .skill-list li { padding:3px 8px; }
       .contact-section { padding-bottom:43px; } .footer-inner { font-size:9px; }
     }
     @media (max-width:360px) { .navigation { gap:11px; } .wordmark { font-size:10px; } .hero-actions { gap:20px; } h1 { font-size:63px; } .chinese-name { font-size:17px; } }
@@ -114,7 +120,7 @@
     <div class="container header-inner">
       <a class="wordmark" href="#main" aria-label="Garry, back to top"><span class="logo" aria-hidden="true">g</span>GARRY</a>
       <nav class="navigation" aria-label="Main navigation">
-        <a href="#research">Research</a><a href="#background">Background</a><a href="#contact">Contact</a>
+        <a href="#research">Research</a><a href="#education">Education</a><a href="#internships">Internships</a><a href="#contact">Contact</a>
         <a class="nav-github" href="https://github.com/Garrithm"><span class="github-word">GitHub</span><span class="arrow" aria-hidden="true">↗</span><span class="sr-only">GitHub profile</span></a>
       </nav>
     </div>
@@ -126,7 +132,7 @@
         <h1 id="name">Garry<span class="chinese-name" lang="zh-CN">曾家辉</span></h1>
         <p class="full-name">JIAHUI ZENG / GARRITHM</p>
         <p class="hero-lead">Robotics, language,<br>and the <em>physical world.</em></p>
-        <p class="intro">I'm a Ph.D. student at the <a class="inline-link" href="https://www.liverpool.ac.uk/">University of Liverpool</a>, working on <strong>robotics foundation models</strong>. I'm currently interning at <strong lang="zh-CN">灵掌</strong>, exploring intelligence for robots in the real world.</p>
+        <p class="intro">I'm a Ph.D. student at the <a class="inline-link" href="https://www.liverpool.ac.uk/">University of Liverpool</a>, working on <strong>robotics foundation models</strong>. I'm currently a Robotics Engineer intern at <strong>Dexteroushands <span lang="zh-CN">(灵掌)</span></strong>, exploring intelligence for robots in the real world.</p>
         <div class="hero-actions"><a class="button" href="#research">Explore my research <span class="arrow" aria-hidden="true">↓</span></a><a class="text-button" href="https://github.com/Garrithm">GitHub <span class="arrow" aria-hidden="true">↗</span></a></div>
       </div>
       <figure class="hero-figure">
@@ -166,7 +172,7 @@
     <div class="affiliation-strip" aria-label="At a glance">
       <div class="affiliation"><span class="small-label">Based at</span><p>University of Liverpool</p></div>
       <div class="affiliation"><span class="small-label">Working on</span><p>Robotics Foundation Models</p></div>
-      <div class="affiliation"><span class="small-label">Currently</span><p>Intern <span>at</span> <span lang="zh-CN">灵掌</span></p></div>
+      <div class="affiliation"><span class="small-label">Currently</span><p>Robotics Engineer Intern <span>at</span> Dexteroushands</p></div>
     </div>
     <section id="research" class="page-section" aria-labelledby="research-heading">
       <p class="section-index"><span>01</span>Research</p>
@@ -177,21 +183,56 @@
         <div class="research-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h3>Research in progress</h3><p>I'll share research projects and publications here as they become available. In the meantime, you can find me on <a class="inline-link" href="https://github.com/Garrithm">GitHub</a>.</p></div></div>
       </div>
     </section>
-    <section id="background" class="page-section" aria-labelledby="background-heading">
-      <p class="section-index"><span>02</span>Background</p>
+    <section id="education" class="page-section" aria-labelledby="education-heading">
+      <p class="section-index"><span>02</span>Education</p>
       <div>
-        <h2 id="background-heading">A little about my journey.</h2>
-        <!-- Add dates, degree subjects, and laboratory details when available. -->
-        <ol class="timeline">
-          <li><span class="timeline-role">Ph.D. · Ongoing</span><div><h3>University of Liverpool <span class="current-tag">Current</span></h3><p>Doctoral studies · Robotics foundation models</p></div></li>
-          <li><span class="timeline-role">Internship</span><div><h3 lang="zh-CN">灵掌 <span class="current-tag" lang="en">Current</span></h3><p>Working on robotics foundation models</p></div></li>
-          <li><span class="timeline-role">Master's</span><div><h3>University of Liverpool</h3><p>Master's degree</p></div></li>
-          <li><span class="timeline-role">Bachelor's</span><div><h3>Nanjing Tech University</h3><p>Bachelor's degree</p></div></li>
+        <h2 id="education-heading">Academic background.</h2>
+        <ol class="timeline" aria-label="Education history">
+          <li>
+            <div class="timeline-date"><time datetime="2025-09">Sep 2025</time> – <time datetime="2029-06">Jun 2029</time><span class="date-note">Expected completion</span></div>
+            <div><h3>University of Liverpool <span class="current-tag">Current</span></h3><p class="position">Doctor of Philosophy (Ph.D.)</p><p>Electrical and Electronics Engineering</p></div>
+          </li>
+          <li>
+            <div class="timeline-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-04">Apr 2025</time></div>
+            <div><h3>University of Liverpool</h3><p class="position">Master of Research (M.Res.)</p><p>Pattern Recognition and Intelligent System</p></div>
+          </li>
+          <li>
+            <div class="timeline-date"><time datetime="2024-10">Oct 2024</time> – <time datetime="2024-12">Dec 2024</time></div>
+            <div><h3>Southern University of Science and Technology</h3><p class="position">Visiting Student</p></div>
+          </li>
+          <li>
+            <div class="timeline-date"><time datetime="2019-09">Sep 2019</time> – <time datetime="2023-06">Jun 2023</time></div>
+            <div><h3>Nanjing Tech University</h3><p class="position">Bachelor of Engineering (B.Eng.)</p><p>Mechanical Engineering</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section id="internships" class="page-section" aria-labelledby="internships-heading">
+      <p class="section-index"><span>03</span>Internships</p>
+      <div>
+        <h2 id="internships-heading">Industry &amp; research experience.</h2>
+        <ol class="timeline" aria-label="Internship history">
+          <li>
+            <div class="timeline-date"><time datetime="2025-05">May 2025</time> – Present</div>
+            <div><h3>Dexteroushands <span lang="zh-CN">(灵掌)</span> <span class="current-tag">Current</span></h3><p class="position">Robotics Engineer · Internship</p><p>Wuxi Dexteroushands Robotic Technology Co.</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><p class="entry-note">Working on robotics foundation models.</p><ul class="skill-list" aria-label="Skills at Dexteroushands"><li>Visual Perception</li><li>Robotics</li></ul></div>
+          </li>
+          <li>
+            <div class="timeline-date"><time datetime="2024-12">Dec 2024</time> – <time datetime="2025-05">May 2025</time></div>
+            <div><h3>InfiMaker</h3><p class="position">Robotics Engineer · Internship</p><p class="entry-meta">Shanghai, China · On-site</p><ul class="skill-list" aria-label="Skills at InfiMaker"><li>Visual Perception</li><li>Camera Calibration</li></ul></div>
+          </li>
+          <li>
+            <div class="timeline-date"><time datetime="2024-01">Jan 2024</time> – <time datetime="2024-10">Oct 2024</time></div>
+            <div><h3>JITRI</h3><p class="position">Researcher · Internship</p><p>Jiangsu Industrial Technology Research Institute</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><p class="entry-note">Joint Master's Program Institution</p><ul class="skill-list" aria-label="Skills at JITRI"><li>Computer Vision</li><li>Deep Learning</li></ul></div>
+          </li>
+          <li>
+            <div class="timeline-date"><time datetime="2023-04">Apr 2023</time> – <time datetime="2023-09">Sep 2023</time></div>
+            <div><h3>Bosch China</h3><p class="position">Automation Engineer · Internship</p><p class="entry-meta">Suzhou, Jiangsu, China · On-site</p><ul class="skill-list" aria-label="Skills at Bosch"><li>Machine Vision</li><li>Beckhoff TwinCAT</li></ul></div>
+          </li>
         </ol>
       </div>
     </section>
     <section id="contact" class="page-section contact-section" aria-labelledby="contact-heading">
-      <p class="section-index"><span>03</span>Get in touch</p>
+      <p class="section-index"><span>04</span>Get in touch</p>
       <div class="contact-layout"><div><h2 id="contact-heading">Let's talk robotics.</h2><p>Always happy to connect over research, ideas, and robots.</p></div><a class="button" href="https://github.com/Garrithm">Find me on GitHub <span class="arrow" aria-hidden="true">↗</span></a></div>
     </section>
   </main>

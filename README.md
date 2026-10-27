@@ -10,11 +10,12 @@ Edit `index.html` and commit to `main`. The page is self-contained, with respons
 
 - Introduction: `.hero-copy`
 - Research: `#research`
-- Education and internship: `#background`
+- Education: `#education`
+- Internships: `#internships`
 - Contact: `#contact`
 - Appearance: the `<style>` block and CSS custom properties in `:root`
 
-Dates, lab details, publications, a portrait, and an email address can be added when available.
+Education and internship dates, degree subjects, roles, and locations are included. The Ph.D. completion date is marked as expected. Lab details, publications, a portrait, and an email address can be added when available.
 
 ## GitHub Pages
 
