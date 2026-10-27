@@ -1,12 +1,12 @@
-# Garry's personal website
+# Jiahui Zeng's personal website
 
-Academic homepage of **Garry / Jiahui Zeng (曾家辉)**, a Ph.D. student at the University of Liverpool working on robotics foundation models.
+Academic homepage of **Jiahui Zeng (曾家辉)**, a Ph.D. student at the University of Liverpool working on robotics foundation models.
 
 Website: [garrithm.github.io](https://garrithm.github.io/)
 
 ## Update the website
 
-Edit `index.html` and commit to `main`. The page uses responsive CSS, an original inline SVG illustration, and local organization logos in `assets/logos/`. Keep the `assets/` directory alongside `index.html` when copying or publishing the site. There is no build step and no external asset dependency.
+Edit `index.html` and preview locally first. Publish to `main` only after the changes are approved. The page uses responsive CSS, Jiahui Zeng's portrait in `assets/jiahui-zeng-portrait.png`, and local organization logos in `assets/logos/`. Keep the `assets/` directory alongside `index.html` when copying or publishing the site. There is no build step and no external asset dependency.
 
 - Introduction: `.hero-copy`
 - Research: `#research`
@@ -15,7 +15,7 @@ Edit `index.html` and commit to `main`. The page uses responsive CSS, an origina
 - Contact: `#contact`
 - Appearance: the `<style>` block and CSS custom properties in `:root`
 
-Education and internship dates, degree subjects, roles, and locations are included. The Ph.D. completion date is marked as expected. Lab details, publications, a portrait, and an email address can be added when available.
+Education and internship dates, degree subjects, roles, and locations are included. The Ph.D. completion date is marked as expected. The Contact section includes psjzeng8@liverpool.ac.uk and garryz.sep@gmail.com. Lab details and publications can be added when available.
 
 ## GitHub Pages
 

@@ -4,18 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8fa">
-  <meta name="description" content="Garry (Jiahui Zeng / 曾家辉), a Ph.D. student at the University of Liverpool working on robotics foundation models. Currently interning at Dexteroushands.">
+  <meta name="description" content="Jiahui Zeng (曾家辉), a Ph.D. student at the University of Liverpool working on robotics foundation models. Currently interning at Dexteroushands.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Garry · Robotics & Embodied Intelligence">
+  <meta property="og:title" content="Jiahui Zeng 曾家辉">
   <meta property="og:description" content="Ph.D. student at the University of Liverpool. Researching robotics foundation models.">
-  <meta property="og:url" content="https://garrithm.github.io/">
-  <title>Garry · Robotics & Embodied Intelligence</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231a3648'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia' font-size='44' fill='white'%3EG%3C/text%3E%3C/svg%3E">
+  <title>Jiahui Zeng 曾家辉</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231a3648'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Microsoft YaHei' font-size='44' fill='white'%3EJ%3C/text%3E%3C/svg%3E">
   <style>
-    :root { --paper:#f6f7fb; --ink:#1d2b47; --muted:#647189; --line:#e0e5ee; --blue:#365baa; --orange:#d47844; --serif:Georgia,"Times New Roman",serif; --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif; --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace; }
+    :root { --paper:#f6f7fb; --ink:#1d2b47; --muted:#647189; --line:#e0e5ee; --blue:#365baa; --orange:#d47844; --font:"Microsoft YaHei",sans-serif; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; scroll-padding-top:96px; }
-    body { margin:0; font-family:var(--sans); color:var(--ink); background:var(--paper); line-height:1.7; -webkit-font-smoothing:antialiased; }
+    body { margin:0; font-family:var(--font); color:var(--ink); background:var(--paper); line-height:1.7; -webkit-font-smoothing:antialiased; }
     ::selection { color:var(--ink); background:#dce8f3; }
     a { color:inherit; text-decoration:none; }
     a:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
@@ -25,61 +24,50 @@
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
     .site-header { position:sticky; top:0; z-index:10; border-bottom:1px solid var(--line); background:rgba(247,248,250,.96); backdrop-filter:blur(14px); }
     .header-inner { min-height:82px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .wordmark { display:inline-flex; align-items:center; gap:11px; font-size:13px; font-weight:650; letter-spacing:.09em; }
-    .logo { display:grid; place-items:center; width:32px; height:32px; background:var(--ink); color:white; border-radius:10px; font-family:var(--serif); font-size:25px; font-weight:400; letter-spacing:0; box-shadow:3px 3px 0 #d8e1f4; }
+    .wordmark { display:inline-flex; align-items:center; gap:8px; font-size:16px; font-weight:600; letter-spacing:0; white-space:nowrap; }
     .navigation { display:flex; align-items:center; gap:28px; font-size:13px; color:var(--muted); }
     .navigation a:hover { color:var(--blue); }
-    .navigation .nav-github { color:var(--ink); border-left:1px solid #ccd6dd; padding-left:28px; display:flex; align-items:center; gap:7px; }
     .arrow { display:inline-block; font-size:17px; line-height:1; }
-    .hero { display:grid; grid-template-columns:1.08fr 1fr; align-items:center; gap:46px; padding:74px 0 66px; }
-    .eyebrow,.section-index { font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; }
+    .hero { display:grid; grid-template-columns:300px minmax(0,1fr); align-items:center; gap:72px; padding:74px 0 66px; }
+    .eyebrow,.section-index { font-family:var(--font); font-size:11px; letter-spacing:.1em; text-transform:uppercase; }
     .eyebrow { display:inline-flex; align-items:center; gap:9px; color:var(--blue); margin:0 0 23px; background:#eaf0fc; border:1px solid #dde6f7; border-radius:30px; padding:7px 11px; }
     .status-dot { width:6px; height:6px; flex-shrink:0; border-radius:50%; background:var(--blue); box-shadow:0 0 0 4px #e4ebf1; }
-    h1 { margin:0; font-family:var(--serif); font-weight:400; font-size:clamp(62px,6.8vw,88px); letter-spacing:-.055em; line-height:1.05; }
-    .chinese-name { display:inline-block; margin-left:17px; font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:22px; font-weight:400; letter-spacing:.1em; vertical-align:middle; color:var(--muted); }
-    .full-name { margin:15px 0 24px; font-family:var(--mono); color:var(--muted); font-size:12px; letter-spacing:.08em; }
-    .hero-lead { margin:0 0 21px; font-size:28px; font-weight:450; letter-spacing:-.035em; line-height:1.4; max-width:440px; }
-    .hero-lead em { font-style:normal; color:var(--blue); }
-    .intro { max-width:480px; margin:0; font-size:15px; color:var(--muted); line-height:1.9; }
-    .intro strong { color:var(--ink); font-weight:550; }
+    h1 { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 16px; margin:0 0 24px; font-family:var(--font); font-weight:600; font-size:44px; letter-spacing:-.03em; line-height:1.3; }
+    .english-name,.chinese-name { font:inherit; letter-spacing:inherit; white-space:nowrap; }
+    .intro { max-width:660px; margin:0; font-size:20px; color:var(--muted); line-height:1.9; }
+    .intro strong { color:var(--ink); font-weight:600; }
     .inline-link { text-decoration:underline; text-decoration-color:#b0c1ce; text-underline-offset:4px; }
     .inline-link:hover { color:var(--blue); }
     .hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:26px; margin-top:30px; }
-    .button { display:inline-flex; align-items:center; justify-content:center; gap:19px; padding:11px 18px; font-size:12px; font-weight:550; border-radius:4px; background:var(--ink); color:white; transition:background .15s,transform .15s; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:19px; padding:11px 18px; font-size:12px; font-weight:600; border-radius:4px; background:var(--ink); color:white; transition:background .15s,transform .15s; }
     .button:hover { background:var(--blue); transform:translateY(-1px); }
-    .text-button { display:inline-flex; align-items:center; gap:8px; font-size:12px; border-bottom:1px solid #c1cbd3; padding-bottom:2px; }
-    .text-button:hover { color:var(--blue); border-color:var(--blue); }
-    .hero-figure { position:relative; margin:0; padding:20px 22px 15px; border:1px solid #d6dfed; background:radial-gradient(circle at 85% 88%,#f6e5d3 0,transparent 45%),linear-gradient(145deg,#e8edf9,#e9f3f4); border-radius:20px; overflow:hidden; box-shadow:0 18px 50px -33px #687b9d; }
-    .figure-top { display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); color:#5b6d7c; font-size:9px; letter-spacing:.08em; }
-    .figure-top .figure-cross { font-size:19px; font-weight:300; line-height:1; color:#8b9ba8; }
-    .robot-art { display:block; width:100%; height:auto; margin:3px 0 0; }
-    figcaption { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:10px; color:var(--muted); border-top:1px solid #d9e1e8; padding-top:12px; }
-    figcaption .caption-label { font-family:var(--mono); text-transform:uppercase; font-size:9px; letter-spacing:.05em; }
+    .hero-portrait { width:100%; justify-self:start; margin:0; padding:10px; background:white; border:1px solid #dce3ed; border-radius:20px; box-shadow:0 18px 50px -33px #687b9d; }
+    .hero-portrait img { display:block; width:100%; height:auto; aspect-ratio:2 / 3; border-radius:12px; }
     .affiliation-strip { display:grid; grid-template-columns:1.1fr 1fr 1.2fr; gap:14px; padding:0 0 35px; border-bottom:1px solid var(--line); }
     .affiliation { display:flex; align-items:center; gap:13px; padding:18px; background:white; border:1px solid var(--line); border-radius:12px; }
-    .affiliation-icon { flex-shrink:0; display:grid; place-items:center; width:43px; height:43px; background:#f0f3fc; border-radius:9px; color:var(--blue); font-family:var(--mono); font-size:24px; }
+    .affiliation-icon { flex-shrink:0; display:grid; place-items:center; width:43px; height:43px; background:#f0f3fc; border-radius:9px; color:var(--blue); font-family:var(--font); font-size:24px; }
     .affiliation-icon img { width:32px; height:34px; object-fit:contain; }
     .affiliation-icon.image { background:white; }
     .affiliation-icon.wide { width:72px; }
     .affiliation-icon.wide img { width:70px; height:38px; }
-    .small-label { display:block; font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
-    .affiliation p { margin:0; font-size:12px; font-weight:550; line-height:1.7; }
+    .small-label { display:block; font-family:var(--font); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+    .affiliation p { margin:0; font-size:12px; font-weight:600; line-height:1.7; }
     .affiliation p span { color:var(--muted); }
     .page-section { display:grid; grid-template-columns:145px minmax(0,1fr); gap:30px; padding:58px 0; border-bottom:1px solid var(--line); }
     .section-index { color:var(--ink); padding-top:8px; margin:0; }
     .section-index span { display:inline-grid; place-items:center; width:25px; height:25px; border:1px solid #dae3f1; border-radius:7px; color:var(--blue); background:#edf2fc; margin-right:9px; }
-    h2 { font-family:var(--serif); font-size:35px; font-weight:400; letter-spacing:-.035em; line-height:1.3; margin:0 0 19px; }
+    h2 { font-family:var(--font); font-size:35px; font-weight:600; letter-spacing:-.035em; line-height:1.3; margin:0 0 19px; }
     .section-copy { max-width:700px; color:var(--muted); font-size:15px; margin:0; line-height:1.95; }
     .topic-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:25px 0 0; padding:0; list-style:none; }
     .topic-list li { font-size:12px; border:1px solid #dce4f1; border-radius:10px; padding:18px; color:#334e83; background:#edf2fc; }
     .topic-list li:nth-child(2) { color:#276e68; border-color:#d5e7e2; background:#eaf4ef; }
     .topic-list li:nth-child(3) { color:#965b32; border-color:#eddfd0; background:#faf0e6; }
-    .topic-number { display:block; margin-bottom:14px; font-family:var(--mono); font-size:10px; opacity:.7; }
+    .topic-number { display:block; margin-bottom:14px; font-family:var(--font); font-size:10px; opacity:.7; }
     .topic-list strong { display:block; font-size:13px; font-weight:600; line-height:1.5; }
     .topic-list p { font-size:11px; line-height:1.8; margin:7px 0 0; }
     .research-note { display:flex; align-items:flex-start; gap:15px; margin-top:20px; padding:19px 21px; background:white; border:1px solid var(--line); border-radius:10px; }
-    .note-symbol { font-family:var(--serif); font-size:24px; line-height:1.4; color:var(--orange); }
-    .research-note h3 { font-size:12px; font-weight:550; margin:0 0 4px; }
+    .note-symbol { font-family:var(--font); font-size:24px; line-height:1.4; color:var(--orange); }
+    .research-note h3 { font-size:12px; font-weight:600; margin:0 0 4px; }
     .research-note p { color:var(--muted); font-size:12px; margin:0; line-height:1.8; }
     .timeline { display:grid; gap:16px; list-style:none; padding:0; margin:25px 0 0; }
     .education-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -92,15 +80,14 @@
     .org-logo.logo-wide { padding:10px; }
     .org-logo.logo-dark { background:#050607; border-color:#050607; }
     .entry-topline { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:0 0 8px; }
-    .entry-type { font-family:var(--mono); color:var(--brand,#365baa); font-size:10px; letter-spacing:.05em; text-transform:uppercase; }
-    .timeline-date { margin-top:15px; padding-top:12px; border-top:1px solid #edf0f5; color:var(--muted); font-family:var(--mono); font-size:10px; line-height:1.8; }
-    .timeline-date .date-note { display:block; color:#738591; font-family:var(--sans); font-size:10px; }
+    .entry-type { font-family:var(--font); color:var(--brand,#365baa); font-size:10px; letter-spacing:.05em; text-transform:uppercase; }
+    .timeline-date { margin-top:15px; padding-top:12px; border-top:1px solid #edf0f5; color:var(--muted); font-family:var(--font); font-size:10px; line-height:1.8; }
+    .timeline-date .date-note { display:block; color:#738591; font-family:var(--font); font-size:10px; }
     .entry-topline .timeline-date { margin:0 0 0 auto; padding:0; border:0; }
     .timeline h3 { margin:0; font-size:17px; font-weight:600; letter-spacing:-.025em; line-height:1.5; }
     .timeline p { margin:5px 0 0; font-size:12px; color:var(--muted); line-height:1.8; }
     .timeline .position { color:var(--ink); }
     .timeline .entry-meta { margin-top:7px; font-size:11px; }
-    .timeline .entry-note { font-size:12px; }
     .skill-list { display:flex; flex-wrap:wrap; gap:6px; list-style:none; padding:0; margin:12px 0 0; }
     .timeline .skill-list li { display:block; padding:3px 9px; border:1px solid #e1e8ed; border-radius:5px; background:#f5f7fa; color:#526780; font-size:10px; }
     .current-tag { display:inline-block; font-size:9px; font-weight:500; color:#217668; border:1px solid #cce7dd; border-radius:4px; background:#edf8f1; padding:1px 7px; vertical-align:middle; }
@@ -108,28 +95,30 @@
     .contact-layout { display:flex; justify-content:space-between; align-items:center; gap:32px; padding:28px; background:linear-gradient(110deg,#e9eefb,#eaf4f1); border:1px solid #dbe4ed; border-radius:14px; }
     .contact-layout h2 { margin-bottom:12px; }
     .contact-layout p { margin:0; color:var(--muted); font-size:14px; }
-    .contact-layout .button { white-space:nowrap; }
+    .contact-emails { display:flex; flex-direction:column; align-items:flex-start; gap:12px; min-width:0; }
+    .contact-email { max-width:100%; font-size:17px; font-weight:600; overflow-wrap:anywhere; }
     .site-footer { border-top:1px solid var(--line); }
-    .footer-inner { display:flex; justify-content:space-between; gap:20px; padding:23px 0; color:var(--muted); font-size:10px; }
+    .footer-inner { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 20px; padding:23px 0; color:var(--muted); font-size:10px; }
     .footer-inner a:hover { color:var(--blue); }
     @media (min-width:1400px) { .hero { padding-top:86px; padding-bottom:78px; } }
     @media (max-width:1100px) { .education-list { grid-template-columns:1fr; } .affiliation { padding:15px; gap:10px; } .affiliation-icon { width:34px; } .affiliation-icon.wide { width:54px; } .affiliation-icon.wide img { width:52px; } }
-    @media (max-width:950px) { .container { width:calc(100% - 48px); } .hero { gap:30px; padding:53px 0; } h1 { font-size:68px; } .chinese-name { font-size:17px; margin-left:12px; } .hero-lead { font-size:24px; } .page-section { grid-template-columns:125px minmax(0,1fr); gap:20px; } .contact-layout { align-items:flex-start; flex-direction:column; gap:22px; } .affiliation-strip { grid-template-columns:1fr; gap:10px; } .affiliation { padding:13px 18px; } .affiliation-icon.wide { width:70px; } .affiliation-icon.wide img { width:68px; } }
+    @media (max-width:950px) { .container { width:calc(100% - 48px); } .hero { grid-template-columns:230px minmax(0,1fr); gap:30px; padding:53px 0; } h1 { font-size:38px; } .page-section { grid-template-columns:125px minmax(0,1fr); gap:20px; } .contact-layout { align-items:flex-start; flex-direction:column; gap:22px; } .affiliation-strip { grid-template-columns:1fr; gap:10px; } .affiliation { padding:13px 18px; } .affiliation-icon.wide { width:70px; } .affiliation-icon.wide img { width:68px; } }
     @media (max-width:700px) {
       html { scroll-padding-top:114px; } .container { width:calc(100% - 40px); } .header-inner { min-height:90px; flex-wrap:wrap; padding:12px 0 10px; gap:8px; }
-      .wordmark { font-size:11px; gap:8px; } .logo { width:27px; height:27px; font-size:20px; }
-      .navigation { width:100%; justify-content:space-between; gap:10px; font-size:11px; } .navigation .nav-github { padding-left:0; border:0; } .nav-github .github-word { display:none; }
+      .wordmark { font-size:16px; gap:8px; }
+      .navigation { width:100%; justify-content:space-between; gap:10px; font-size:11px; }
       .hero { grid-template-columns:1fr; padding:44px 0 35px; gap:35px; } .eyebrow { font-size:10px; margin-bottom:21px; }
-      h1 { font-size:72px; } .chinese-name { font-size:20px; margin-left:17px; } .full-name { margin-top:14px; margin-bottom:23px; }
-      .hero-lead { font-size:27px; max-width:440px; } .intro { font-size:14px; } .hero-actions { margin-top:25px; }
-      .hero-figure { max-width:480px; width:100%; justify-self:center; padding:18px 20px 13px; } .robot-art { max-height:330px; }
+      h1 { font-size:clamp(30px,8.5vw,40px); gap:6px 12px; margin-bottom:20px; }
+      .intro { font-size:18px; } .hero-actions { margin-top:25px; }
+      .contact-email { font-size:16px; }
+      .hero-portrait { width:min(100%,230px); justify-self:center; padding:8px; border-radius:16px; } .hero-portrait img { border-radius:9px; }
       .affiliation-strip { grid-template-columns:1fr; gap:10px; padding:0 0 30px; } .affiliation { padding:14px 17px; gap:13px; } .affiliation-icon { width:45px; } .affiliation-icon.wide { width:70px; } .small-label { margin:0 0 3px; font-size:8px; } .affiliation p { font-size:12px; }
       .page-section { grid-template-columns:1fr; gap:20px; padding:37px 0; } .section-index { padding:0; font-size:10px; } h2 { font-size:31px; }
       .section-copy { font-size:14px; } .research-note { padding:17px; margin-top:18px; } .topic-list { grid-template-columns:1fr; gap:10px; } .topic-list li { padding:16px 18px; } .topic-number { float:right; margin-bottom:0; } .topic-list strong { max-width:85%; } .topic-list p { margin-top:4px; }
       .timeline { gap:13px; margin-top:21px; } .timeline > li { grid-template-columns:52px minmax(0,1fr); gap:13px; padding:19px 16px; } .org-logo { width:52px; height:64px; padding:6px; border-radius:8px; } .internship-list > li { grid-template-columns:1fr; gap:16px; } .internship-list .org-logo { width:140px; height:68px; padding:10px; } .timeline h3 { font-size:15px; } .timeline p { font-size:12px; } .timeline-date { font-size:9px; } .entry-topline { gap:7px; margin-bottom:7px; } .entry-topline .timeline-date { margin-left:0; width:100%; } .timeline .skill-list li { padding:3px 7px; font-size:9px; } .contact-layout { padding:23px; }
       .contact-section { padding-bottom:43px; } .footer-inner { font-size:9px; }
     }
-    @media (max-width:360px) { .navigation { gap:11px; } .wordmark { font-size:10px; } .hero-actions { gap:20px; } h1 { font-size:63px; } .chinese-name { font-size:17px; } }
+    @media (max-width:360px) { .navigation { gap:11px; } .hero-actions { gap:20px; } h1 { font-size:30px; } }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
   </style>
 </head>
@@ -137,56 +126,23 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="wordmark" href="#main" aria-label="Garry, back to top"><span class="logo" aria-hidden="true">g</span>GARRY</a>
+      <a class="wordmark" href="#main" aria-label="Jiahui Zeng 曾家辉, back to top"><span>Jiahui Zeng</span><span lang="zh-CN">曾家辉</span></a>
       <nav class="navigation" aria-label="Main navigation">
         <a href="#research">Research</a><a href="#education">Education</a><a href="#internships">Internships</a><a href="#contact">Contact</a>
-        <a class="nav-github" href="https://github.com/Garrithm"><span class="github-word">GitHub</span><span class="arrow" aria-hidden="true">↗</span><span class="sr-only">GitHub profile</span></a>
       </nav>
     </div>
   </header>
   <main id="main" class="container">
     <section class="hero" aria-labelledby="name">
+      <figure class="hero-portrait">
+        <img src="assets/jiahui-zeng-portrait.png" alt="Portrait of Jiahui Zeng (曾家辉)" width="1024" height="1536" fetchpriority="high" decoding="async">
+      </figure>
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Ph.D. Student · University of Liverpool</p>
-        <h1 id="name">Garry<span class="chinese-name" lang="zh-CN">曾家辉</span></h1>
-        <p class="full-name">JIAHUI ZENG / GARRITHM</p>
-        <p class="hero-lead">Robotics, language,<br>and the <em>physical world.</em></p>
+        <h1 id="name"><span class="english-name">Jiahui Zeng</span> <span class="chinese-name" lang="zh-CN">曾家辉</span></h1>
         <p class="intro">I'm a Ph.D. student at the <a class="inline-link" href="https://www.liverpool.ac.uk/">University of Liverpool</a>, working on <strong>robotics foundation models</strong>. I'm currently a Robotics Engineer intern at <strong>Dexteroushands</strong>, exploring intelligence for robots in the real world.</p>
-        <div class="hero-actions"><a class="button" href="#research">Explore my research <span class="arrow" aria-hidden="true">↓</span></a><a class="text-button" href="https://github.com/Garrithm">GitHub <span class="arrow" aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button" href="#research">Explore my research <span class="arrow" aria-hidden="true">↓</span></a></div>
       </div>
-      <figure class="hero-figure">
-        <div class="figure-top"><span>EMBODIED INTELLIGENCE</span><span class="figure-cross" aria-hidden="true">+</span></div>
-        <svg class="robot-art" viewBox="0 0 500 402" role="img" aria-labelledby="robot-title robot-desc" xmlns="http://www.w3.org/2000/svg">
-          <title id="robot-title">A robotic arm reaching toward an object</title>
-          <desc id="robot-desc">An original technical illustration of a robotic manipulator and an orange cube, representing robotics and interaction with the physical world.</desc>
-          <defs>
-            <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#cad4de"/></pattern>
-            <linearGradient id="arm-surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7fafc"/><stop offset=".48" stop-color="#dce5ed"/><stop offset="1" stop-color="#b5c4d0"/></linearGradient>
-            <linearGradient id="base-surface" x1="0" x2="1"><stop stop-color="#d6e0e8"/><stop offset=".5" stop-color="#f2f6fa"/><stop offset="1" stop-color="#a5b7c6"/></linearGradient>
-            <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
-          </defs>
-          <rect x="0" y="0" width="500" height="402" fill="url(#dots)"/>
-          <ellipse cx="268" cy="340" rx="171" ry="44" fill="none" stroke="#d5dfe7"/><ellipse cx="268" cy="340" rx="114" ry="29" fill="none" stroke="#d5dfe7"/>
-          <path d="M52 342H463 M248 287V390" fill="none" stroke="#dce3ea"/>
-          <path d="M160 252C73 109 189 49 307 82C380 102 420 153 419 223" fill="none" stroke="#a9bccd" stroke-width="1.2" stroke-dasharray="4 6"/><path d="m414 218 5 7 5-7" fill="none" stroke="#a9bccd" stroke-width="1.2"/>
-          <ellipse cx="238" cy="342" rx="70" ry="13" fill="#93a5b5" opacity=".26" filter="url(#shadow)"/>
-          <ellipse cx="235" cy="333" rx="53" ry="15" fill="#839bad"/>
-          <path d="M183 323v10c0 20 104 20 104 0v-10" fill="#b3c4d2" stroke="#8ea5b8" stroke-width="1.2"/><ellipse cx="235" cy="322" rx="52" ry="14" fill="#e6edf3" stroke="#96adbf" stroke-width="1.2"/>
-          <path d="M204 319v-31c0-15 62-15 62 0v31c-15 11-47 11-62 0Z" fill="url(#base-surface)" stroke="#91a9bb" stroke-width="1.5"/><ellipse cx="235" cy="288" rx="31" ry="10" fill="#e5edf3" stroke="#91a9bb" stroke-width="1.5"/>
-          <path d="M235 284 178 191" stroke="#7b93a6" stroke-width="47" stroke-linecap="round"/><path d="M235 280 178 191" stroke="url(#arm-surface)" stroke-width="39" stroke-linecap="round"/><path d="m223 267-36-61" stroke="#f9fcfe" stroke-width="4" stroke-linecap="round"/>
-          <circle cx="178" cy="191" r="29" fill="#b1c3d1" stroke="#7d96aa" stroke-width="1.5"/><circle cx="178" cy="191" r="21" fill="#e1eaf1" stroke="#98afc1" stroke-width="1.5"/><circle cx="178" cy="191" r="10" fill="#627e95"/><circle cx="178" cy="191" r="4" fill="#d1e0eb"/>
-          <path d="m193 177 111-79" stroke="#7b93a6" stroke-width="38" stroke-linecap="round"/><path d="m193 177 111-79" stroke="url(#arm-surface)" stroke-width="31" stroke-linecap="round"/><path d="m205 174 88-63" stroke="#f8fbfd" stroke-width="4" stroke-linecap="round"/><path d="m189 163 102-73" stroke="#9db1c1" stroke-width="2"/>
-          <circle cx="307" cy="96" r="24" fill="#aabfce" stroke="#7d96aa" stroke-width="1.5"/><circle cx="307" cy="96" r="16" fill="#e0eaf2" stroke="#96aebe" stroke-width="1.5"/><circle cx="307" cy="96" r="7" fill="#627e95"/>
-          <path d="m322 109 43 54" stroke="#7691a7" stroke-width="29" stroke-linecap="round"/><path d="m322 109 43 54" stroke="url(#arm-surface)" stroke-width="22" stroke-linecap="round"/><path d="m328 112 33 42" stroke="#f8fbfd" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="367" cy="166" r="17" fill="#d4e1eb" stroke="#829db2" stroke-width="2"/><circle cx="367" cy="166" r="7" fill="#5d7a91"/>
-          <path d="m373 177 10 14" stroke="#6c879d" stroke-width="12"/><path d="m371 191 14-10 14 16-5 6-10-10-5 4 5 13-6 4Z" fill="#607e95" stroke="#506f86" stroke-width="1"/><path d="m387 192 8-4 14 17-4 15-7-2 3-10Z" fill="#829eb3" stroke="#607e95" stroke-width="1"/>
-          <path d="M383 225v39" stroke="#cf9b77" stroke-width="1" stroke-dasharray="3 4"/><ellipse cx="382" cy="326" rx="34" ry="10" fill="#d8c5b7" opacity=".5"/>
-          <path d="m356 283 27-16 27 16-27 16Z" fill="#e9b38b" stroke="#bb7a4c" stroke-width="1.2"/><path d="m356 283 27 16v32l-27-16Z" fill="#ce8859" stroke="#bb7a4c" stroke-width="1.2"/><path d="m383 299 27-16v32l-27 16Z" fill="#e0a174" stroke="#bb7a4c" stroke-width="1.2"/>
-          <path d="M100 192h43 M100 192v33 M311 48v20 M311 48h38 M425 286h26" stroke="#9caebd" stroke-width="1" fill="none"/>
-          <g fill="#768c9e" font-family="Consolas,monospace" font-size="8" letter-spacing=".6"><text x="100" y="238">ACT</text><text x="355" y="51">REASON</text><text x="431" y="301">WORLD</text></g><g stroke="#a5b7c6" stroke-width="1"><path d="M31 32h10m-5-5v10 M455 356h10m-5-5v10"/></g>
-        </svg>
-        <figcaption><span>From foundation models to physical action.</span><span class="caption-label">Robotics / Illustration</span></figcaption>
-      </figure>
     </section>
     <div class="affiliation-strip" aria-label="At a glance">
       <div class="affiliation"><span class="affiliation-icon image"><img src="assets/logos/liverpool.png?v=0b1c3a92" width="107" height="162" alt=""></span><div><span class="small-label">Based at</span><p>University of Liverpool</p></div></div>
@@ -199,7 +155,7 @@
         <h2 id="research-heading">Intelligence that meets the world.</h2>
         <p class="section-copy">My research focuses on foundation models for robotics: connecting the capabilities of large models with robots that interact with the physical world. I'm interested in the path from understanding to action, and how intelligent models can become useful in embodied systems.</p>
         <ul class="topic-list" aria-label="Research topics"><li><span class="topic-number">01 / MODELS</span><strong>Robotics Foundation Models</strong><p>From large models to physical action.</p></li><li><span class="topic-number">02 / EMBODIMENT</span><strong>Embodied Intelligence</strong><p>Intelligence through interaction.</p></li><li><span class="topic-number">03 / LEARNING</span><strong>Robot Learning</strong><p>Learning for embodied systems.</p></li></ul>
-        <div class="research-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h3>Research in progress</h3><p>I'll share research projects and publications here as they become available. In the meantime, you can find me on <a class="inline-link" href="https://github.com/Garrithm">GitHub</a>.</p></div></div>
+        <div class="research-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h3>Research in progress</h3><p>I'll share research projects and publications here as they become available.</p></div></div>
       </div>
     </section>
     <section id="education" class="page-section" aria-labelledby="education-heading">
@@ -233,15 +189,15 @@
         <ol class="timeline internship-list" aria-label="Internship history">
           <li style="--brand:#279b9a">
             <div class="org-logo logo-wide"><img src="assets/logos/dexteroushands.png?v=346f2f8f" alt="Dexteroushands logo" width="1000" height="246" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Internship</span><span class="current-tag">Current</span><div class="timeline-date"><time datetime="2025-05">May 2025</time> – Present</div></div><h3>Dexteroushands</h3><p class="position">Robotics Engineer</p><p>Wuxi Dexteroushands Robotic Technology Co.</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><p class="entry-note">Working on robotics foundation models.</p><ul class="skill-list" aria-label="Skills at Dexteroushands"><li>Visual Perception</li><li>Robotics</li></ul></div>
+            <div><div class="entry-topline"><span class="entry-type">Internship</span><span class="current-tag">Current</span><div class="timeline-date"><time datetime="2025-05">May 2025</time> – Present</div></div><h3>Dexteroushands</h3><p class="position">Robotics Engineer</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><ul class="skill-list" aria-label="Skills at Dexteroushands"><li>Visual Perception</li><li>Robotics</li></ul></div>
           </li>
           <li style="--brand:#f58b1c">
             <div class="org-logo logo-wide logo-dark"><img src="assets/logos/infimaker.png?v=d68e2eed" alt="InfiMaker logo" width="234" height="48" loading="lazy"></div>
             <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2024-12">Dec 2024</time> – <time datetime="2025-05">May 2025</time></div></div><h3>InfiMaker</h3><p class="position">Robotics Engineer</p><p class="entry-meta">Shanghai, China · On-site</p><ul class="skill-list" aria-label="Skills at InfiMaker"><li>Visual Perception</li><li>Camera Calibration</li></ul></div>
           </li>
           <li style="--brand:#339b8a">
-            <div class="org-logo"><img src="assets/logos/jitri.png?v=e6b3a495" alt="JITRI logo" width="94" height="115" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2024-01">Jan 2024</time> – <time datetime="2024-10">Oct 2024</time></div></div><h3>JITRI</h3><p class="position">Researcher</p><p>Jiangsu Industrial Technology Research Institute</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><p class="entry-note">Joint Master's Program Institution</p><ul class="skill-list" aria-label="Skills at JITRI"><li>Computer Vision</li><li>Deep Learning</li></ul></div>
+            <div class="org-logo"><img src="assets/logos/jitri.png?v=e6b3a495" alt="Jiangsu Industrial Technology Research Institute logo" width="94" height="115" loading="lazy"></div>
+            <div><div class="entry-topline"><span class="entry-type">Internship</span><div class="timeline-date"><time datetime="2024-01">Jan 2024</time> – <time datetime="2024-10">Oct 2024</time></div></div><h3>Jiangsu Industrial Technology Research Institute</h3><p class="position">Researcher</p><p class="entry-meta">Wuxi, Jiangsu, China · On-site</p><ul class="skill-list" aria-label="Skills at Jiangsu Industrial Technology Research Institute"><li>Computer Vision</li><li>Deep Learning</li></ul></div>
           </li>
           <li style="--brand:#b83f4e">
             <div class="org-logo logo-wide"><img src="assets/logos/bosch.png?v=c72ac9c1" alt="Bosch logo" width="773" height="193" loading="lazy"></div>
@@ -251,10 +207,16 @@
       </div>
     </section>
     <section id="contact" class="page-section contact-section" aria-labelledby="contact-heading">
-      <p class="section-index"><span>04</span>Get in touch</p>
-      <div class="contact-layout"><div><h2 id="contact-heading">Let's talk robotics.</h2><p>Always happy to connect over research, ideas, and robots.</p></div><a class="button" href="https://github.com/Garrithm">Find me on GitHub <span class="arrow" aria-hidden="true">↗</span></a></div>
+      <p class="section-index"><span>04</span>Contact</p>
+      <div class="contact-layout">
+        <h2 id="contact-heading">Contact</h2>
+        <div class="contact-emails" aria-label="Email addresses">
+          <a class="contact-email inline-link" href="mailto:psjzeng8@liverpool.ac.uk">psjzeng8@liverpool.ac.uk</a>
+          <a class="contact-email inline-link" href="mailto:garryz.sep@gmail.com">garryz.sep@gmail.com</a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Garry · 曾家辉</span><span>Robotics &amp; Embodied Intelligence <span aria-hidden="true">/</span> <a href="#main">Back to top ↑</a></span></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Jiahui Zeng 曾家辉</span><span>Robotics &amp; Embodied Intelligence <span aria-hidden="true">/</span> <a href="#main">Back to top ↑</a></span></div></footer>
 </body>
 </html>
