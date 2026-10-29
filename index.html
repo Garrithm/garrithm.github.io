@@ -63,19 +63,22 @@
     .section-index > span:first-child { display:inline-grid; place-items:center; width:25px; height:25px; border:1px solid #dae3f1; border-radius:7px; color:var(--blue); background:#edf2fc; margin-right:9px; }
     h2 { font-family:var(--font); font-size:35px; font-weight:600; letter-spacing:-.035em; line-height:1.3; margin:0 0 19px; }
     .section-copy { max-width:800px; color:var(--muted); font-size:18px; margin:0; line-height:1.9; }
-    .topic-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:25px 0 0; padding:0; list-style:none; }
-    .topic-list li { font-size:15px; border:1px solid #dce4f1; border-radius:10px; padding:18px; color:#334e83; background:#edf2fc; }
-    .topic-list li:nth-child(2) { color:#276e68; border-color:#d5e7e2; background:#eaf4ef; }
-    .topic-list li:nth-child(3) { color:#965b32; border-color:#eddfd0; background:#faf0e6; }
-    .topic-number { display:block; margin-bottom:14px; font-family:var(--font); font-size:13px; font-weight:500; }
-    .topic-list strong { display:block; font-size:17px; font-weight:600; line-height:1.5; }
-    .topic-list p { font-size:15px; line-height:1.8; margin:10px 0 0; }
-    .research-note { display:flex; align-items:flex-start; gap:15px; margin-top:20px; padding:19px 21px; background:white; border:1px solid var(--line); border-radius:10px; }
-    .note-symbol { font-family:var(--font); font-size:24px; line-height:1.4; color:var(--orange); }
-    .research-note h3 { font-size:17px; font-weight:600; margin:0 0 4px; }
-    .research-note p { color:var(--muted); font-size:16px; margin:0; line-height:1.8; }
+    .research-progress { margin-top:28px; }
+    .research-progress h3 { margin:0 0 16px; font-size:24px; font-weight:600; line-height:1.45; }
+    .project-list { display:grid; grid-template-columns:minmax(0,1fr); gap:14px; }
+    .project-card { min-width:0; padding:20px 22px; border:1px solid var(--line); border-left:3px solid var(--project-accent,#365baa); border-radius:10px; background:white; }
+    .project-card:nth-child(even) { --project-accent:#276e68; }
+    .project-card h4 { margin:0 0 10px; font-size:21px; font-weight:600; line-height:1.5; overflow-wrap:break-word; }
+    .project-summary { margin:0; color:var(--muted); font-size:17px; line-height:1.85; }
     .timeline { display:grid; gap:16px; list-style:none; padding:0; margin:25px 0 0; }
-    .education-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .education-list { grid-template-columns:minmax(0,1fr); gap:12px; }
+    .timeline.education-list > li { align-items:center; padding:18px 20px; }
+    .education-list > li > div:last-child { min-width:0; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; column-gap:24px; row-gap:4px; }
+    .education-list .entry-topline { grid-column:1; margin:0; }
+    .education-list h3,.education-list .position { grid-column:1; }
+    .education-list .position { margin:0; }
+    .education-list .timeline-date { grid-column:2; grid-row:1 / span 3; align-self:center; margin:0; padding:0; border:0; white-space:nowrap; }
+    .education-separator { padding-inline:7px; }
     .timeline > li { position:relative; display:grid; grid-template-columns:64px minmax(0,1fr); align-items:start; gap:18px; padding:24px; background:white; border:1px solid var(--line); border-top:3px solid var(--brand,#365baa); border-radius:12px; box-shadow:0 7px 24px -19px #344768; transition:transform .2s,box-shadow .2s; }
     .timeline > li:hover { transform:translateY(-3px); box-shadow:0 12px 26px -19px #344768; }
     .org-logo { display:flex; align-items:center; justify-content:center; width:64px; height:78px; padding:8px; background:white; border:1px solid #edf0f4; border-radius:10px; }
@@ -103,7 +106,7 @@
     .footer-inner { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 20px; padding:23px 0; color:var(--muted); font-size:14px; }
     .footer-inner a:hover { color:var(--blue); }
     @media (min-width:1400px) { .hero { padding-top:86px; padding-bottom:78px; } }
-    @media (max-width:1100px) { .education-list { grid-template-columns:1fr; } .affiliation { padding:15px; gap:10px; } .affiliation-icon { width:34px; } .affiliation-icon.wide { width:54px; } .affiliation-icon.wide img { width:52px; } }
+    @media (max-width:1100px) { .affiliation { padding:15px; gap:10px; } .affiliation-icon { width:34px; } .affiliation-icon.wide { width:54px; } .affiliation-icon.wide img { width:52px; } }
     @media (max-width:950px) { .navigation { gap:18px; font-size:14px; } .container { width:calc(100% - 48px); } .hero { grid-template-columns:230px minmax(0,1fr); gap:30px; padding:53px 0; } h1 { font-size:38px; } .page-section { grid-template-columns:125px minmax(0,1fr); gap:20px; } .contact-layout { align-items:flex-start; flex-direction:column; gap:22px; } .affiliation-strip { grid-template-columns:1fr; gap:10px; } .affiliation { padding:13px 18px; } .affiliation-icon.wide { width:70px; } .affiliation-icon.wide img { width:68px; } }
     @media (max-width:700px) {
       html { scroll-padding-top:140px; } .container { width:calc(100% - 40px); } .header-inner { min-height:116px; grid-template-columns:minmax(0,1fr) auto; padding:12px 0 10px; gap:12px 8px; }
@@ -118,10 +121,11 @@
       .hero-portrait { width:min(100%,230px); justify-self:center; padding:8px; border-radius:16px; } .hero-portrait img { border-radius:9px; }
       .affiliation-strip { grid-template-columns:1fr; gap:10px; padding:0 0 30px; } .affiliation { padding:14px 17px; gap:13px; } .affiliation-icon { width:45px; } .affiliation-icon.wide { width:70px; } .small-label { margin:0 0 7px; font-size:13px; } .affiliation p { font-size:16px; }
       .page-section { grid-template-columns:1fr; gap:20px; padding:37px 0; } .section-index { padding:0; font-size:14px; } h2 { font-size:31px; }
-      .section-copy { font-size:17px; } .research-note { padding:17px; margin-top:18px; } .topic-list { grid-template-columns:1fr; gap:10px; } .topic-list li { padding:16px 18px; } .topic-number { margin-bottom:10px; } .topic-list strong { max-width:100%; } .topic-list p { margin-top:8px; }
+      .section-copy { font-size:17px; } .research-progress { margin-top:24px; } .research-progress h3 { margin-bottom:14px; font-size:23px; } .project-list { gap:12px; } .project-card { padding:17px 18px; } .project-card h4 { font-size:20px; }
       .timeline { gap:13px; margin-top:21px; } .timeline > li { grid-template-columns:52px minmax(0,1fr); gap:13px; padding:19px 16px; } .org-logo { width:52px; height:64px; padding:6px; border-radius:8px; } .internship-list > li { grid-template-columns:1fr; gap:16px; } .internship-list .org-logo { width:140px; height:68px; padding:10px; } .timeline h3 { font-size:18px; } .timeline p { font-size:16px; } .timeline-date { font-size:14px; } .entry-topline { gap:7px; margin-bottom:7px; } .entry-topline .timeline-date { margin-left:0; width:100%; } .contact-layout { padding:23px; }
       .contact-section { padding-bottom:43px; } .footer-inner { font-size:13px; }
     }
+    @media (max-width:700px) { .timeline.education-list > li { padding:17px 16px; } .education-list > li > div:last-child { grid-template-columns:minmax(0,1fr); gap:4px; } .education-list .timeline-date { grid-column:1; grid-row:auto; margin-top:4px; white-space:normal; } }
     @media (max-width:360px) { html { scroll-padding-top:180px; } .navigation { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 16px; } .navigation a { padding:3px 0; } .hero-actions { gap:20px; } h1 { font-size:30px; } }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none!important; } }
   </style>
@@ -161,9 +165,41 @@
       <p class="section-index"><span>01</span><span data-i18n="nav.research">Research</span></p>
       <div>
         <h2 id="research-heading" data-i18n="research.heading">Robot intelligence for real industrial tasks</h2>
-        <p class="section-copy" data-i18n="research.description">My research centers on robotics foundation models and dexterous manipulation, with a focus on perception, learning, and manipulation for robots equipped with dexterous hands in real industrial settings. Guided by industrial tasks, I explore algorithms that connect visual perception with action generation and bring embodied intelligence into practical use.</p>
-        <ul class="topic-list" aria-label="Research topics" data-i18n-aria-label="a11y.topics"><li><span class="topic-number" data-i18n="research.numberModels">01 / MODELS</span><strong data-i18n="research.models">Robotics Foundation Models</strong><p data-i18n="research.modelsDescription">Connecting perception and task understanding with robot actions.</p></li><li><span class="topic-number" data-i18n="research.numberEmbodiment">02 / MANIPULATION</span><strong data-i18n="research.embodiment">Dexterous Manipulation</strong><p data-i18n="research.embodimentDescription">Coordinating robots and dexterous hands for industrial manipulation.</p></li><li><span class="topic-number" data-i18n="research.numberLearning">03 / LEARNING</span><strong data-i18n="research.learning">Robot Learning for Industry</strong><p data-i18n="research.learningDescription">Validating and applying learning algorithms through real industrial tasks.</p></li></ul>
-        <div class="research-note"><span class="note-symbol" aria-hidden="true">↗</span><div><h3 data-i18n="research.progress">Research in progress</h3><p data-i18n="research.progressDescription">I'll share research projects and publications here as they become available.</p></div></div>
+        <p class="section-copy" data-i18n="research.description">My research focuses on robotics foundation models and dexterous manipulation, including perception, alignment, and contact-rich interaction in real industrial settings. I explore robotic algorithms and systems through autonomous insertion, dimensional measurement, and human–robot teleoperation tasks.</p>
+        <section id="ongoing-research" class="research-progress" aria-labelledby="ongoing-research-heading">
+          <h3 id="ongoing-research-heading" data-i18n="research.progress">Research in progress</h3>
+          <div class="project-list">
+            <article class="project-card" aria-labelledby="connector-project-title">
+              <h4 id="connector-project-title" data-i18n="project.connector.title">Autonomous Robotic Insertion of Industrial Connectors</h4>
+              <p class="project-summary" data-i18n="project.connector.summary">This ongoing research addresses autonomous robotic insertion of industrial connectors under initial position and orientation errors. The planned approach combines visual information and contact feedback to connect target localization and alignment with local search and compliant insertion. Particular attention is given to seating verification and recovery from unsuccessful attempts, with the aim of improving reliability in practical industrial settings.</p>
+            </article>
+            <article class="project-card" aria-labelledby="rotor-project-title">
+              <h4 id="rotor-project-title" data-i18n="project.rotor.title">Autonomous Compressor Rotor Insertion and Shaft Diameter Measurement</h4>
+              <p class="project-summary" data-i18n="project.rotor.summary">This ongoing research connects autonomous robotic insertion of compressor rotors with measurement of rotor shaft diameter. It examines rotor localization, axis alignment, and insertion alongside dimensional verification. The work also explores how grasping pose, measurement location, and robot positioning repeatability affect diameter readings, aiming to establish a coherent workflow linking manipulation and measurement.</p>
+            </article>
+          </div>
+        </section>
+        <section id="project-experience" class="research-progress" aria-labelledby="project-experience-heading">
+          <h3 id="project-experience-heading" data-i18n="portfolio.heading">Project Experience</h3>
+          <div class="project-list">
+            <article class="project-card" aria-labelledby="eod-project-title">
+              <h4 id="eod-project-title" data-i18n="portfolio.eod.title">Teleoperation of a Dual-Arm Quadruped Robot for EOD</h4>
+              <p class="project-summary" data-i18n="portfolio.eod.summary">This project combines Marvin robotic arms, an exoskeleton, and VR for remote operation of a dual-arm quadruped robot in specialized environments. It focuses on mapping operator motion to the robot arms, coordinating arm operation with body movement, and presenting field views and robot state. These elements connect the operator interface with remote execution in a unified teleoperation workflow.</p>
+            </article>
+            <article class="project-card" aria-labelledby="screwdriving-project-title">
+              <h4 id="screwdriving-project-title" data-i18n="portfolio.screwdriving.title">Vision- and Force-Guided Robotic Screwdriving System</h4>
+              <p class="project-summary" data-i18n="portfolio.screwdriving.summary">This project uses a classical perception, planning, and control pipeline for robotic screwdriving. YOLO Pose keypoints and PnP geometry provide target localization and pre-alignment. Six-axis force/torque feedback informs contact detection and axial approach, coordinated with the screwdriving unit during tightening. The workflow connects target recognition, robot approach, contact-guided execution, and result verification.</p>
+            </article>
+            <article class="project-card" aria-labelledby="sheet-palletizing-project-title">
+              <h4 id="sheet-palletizing-project-title" data-i18n="portfolio.sheet-palletizing.title">Vision-Guided Robotic Suction Picking and Palletizing of Sheet Workpieces</h4>
+              <p class="project-summary" data-i18n="portfolio.sheet-palletizing.summary">This project combines a Marvin robotic arm, SAM3 target segmentation, and pose estimation for automated sheet picking and palletizing. The workflow links target-region extraction with suction position and orientation, transfer-path planning, and pallet-layer management. Robot motion is coordinated with suction and release timing to connect picking, transfer, and placement within a consistent handling process.</p>
+            </article>
+            <article class="project-card" aria-labelledby="highway-project-title">
+              <h4 id="highway-project-title" data-i18n="portfolio.highway.title">Quadruped Robot Teleoperation for Highway Operations</h4>
+              <p class="project-summary" data-i18n="portfolio.highway.summary">This project uses VR as the remote operator interface for a quadruped robot in highway operations. Operator intent is translated into locomotion and turning commands, supported by field views, body posture, and operating-state feedback. The work connects movement control, mode switching, and pause and takeover workflows, with attention to intuitive interaction and consistent operation states.</p>
+            </article>
+          </div>
+        </section>
       </div>
     </section>
     <section id="education" class="page-section" aria-labelledby="education-heading">
@@ -173,11 +209,11 @@
         <ol class="timeline education-list" aria-label="Education history" data-i18n-aria-label="a11y.education">
           <li style="--brand:#283568">
             <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" data-i18n-alt="a11y.logo.liverpool" width="107" height="162" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.doctoral">Doctoral studies</span><span class="current-tag" data-i18n="education.current">Current</span></div><h3 data-i18n="org.liverpool">University of Liverpool</h3><p class="position" data-i18n="education.phd">Doctor of Philosophy (Ph.D.)</p><p data-i18n="education.phdSubject">Electrical and Electronics Engineering</p><div class="timeline-date"><time datetime="2025-09">Sep 2025</time> – <span data-i18n="date.present">Present</span></div></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.doctoral">Doctoral studies</span><span class="current-tag" data-i18n="education.current">Current</span></div><h3 data-i18n="org.liverpool">University of Liverpool</h3><p class="position"><span data-i18n="education.phd">Doctor of Philosophy (Ph.D.)</span><span class="education-separator" aria-hidden="true">·</span><span data-i18n="education.phdSubject">Electrical and Electronics Engineering</span></p><div class="timeline-date"><time datetime="2025-09">Sep 2025</time> – <span data-i18n="date.present">Present</span></div></div>
           </li>
           <li style="--brand:#283568">
             <div class="org-logo"><img src="assets/logos/liverpool.png?v=0b1c3a92" alt="University of Liverpool logo" data-i18n-alt="a11y.logo.liverpool" width="107" height="162" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.masters">Master's degree</span></div><h3 data-i18n="org.liverpool">University of Liverpool</h3><p class="position" data-i18n="education.mres">Master of Research (M.Res.)</p><p data-i18n="education.mresSubject">Pattern Recognition and Intelligent System</p><div class="timeline-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-04">Apr 2025</time></div></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.masters">Master's degree</span></div><h3 data-i18n="org.liverpool">University of Liverpool</h3><p class="position"><span data-i18n="education.mres">Master of Research (M.Res.)</span><span class="education-separator" aria-hidden="true">·</span><span data-i18n="education.mresSubject">Pattern Recognition and Intelligent System</span></p><div class="timeline-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-04">Apr 2025</time></div></div>
           </li>
           <li style="--brand:#d99737">
             <div class="org-logo"><img src="assets/logos/sustech.png?v=8e54a0ee" alt="Southern University of Science and Technology logo" data-i18n-alt="a11y.logo.sustech" width="383" height="383" loading="lazy"></div>
@@ -185,7 +221,7 @@
           </li>
           <li style="--brand:#169ac3">
             <div class="org-logo"><img src="assets/logos/nanjing-tech.png?v=ec2b9ad4" alt="Nanjing Tech University logo" data-i18n-alt="a11y.logo.nanjingTech" width="838" height="1000" loading="lazy"></div>
-            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.bachelors">Bachelor's degree</span></div><h3 data-i18n="org.nanjingTech">Nanjing Tech University</h3><p class="position" data-i18n="education.beng">Bachelor of Engineering (B.Eng.)</p><p data-i18n="education.bengSubject">Mechanical Engineering</p><div class="timeline-date"><time datetime="2019-09">Sep 2019</time> – <time datetime="2023-06">Jun 2023</time></div></div>
+            <div><div class="entry-topline"><span class="entry-type" data-i18n="education.bachelors">Bachelor's degree</span></div><h3 data-i18n="org.nanjingTech">Nanjing Tech University</h3><p class="position"><span data-i18n="education.beng">Bachelor of Engineering (B.Eng.)</span><span class="education-separator" aria-hidden="true">·</span><span data-i18n="education.bengSubject">Mechanical Engineering</span></p><div class="timeline-date"><time datetime="2019-09">Sep 2019</time> – <time datetime="2023-06">Jun 2023</time></div></div>
           </li>
         </ol>
       </div>
@@ -247,19 +283,9 @@
     "glance.research": "Working on",
     "glance.current": "Currently part-time",
     "org.liverpool": "University of Liverpool",
-    "research.models": "Robotics Foundation Models",
     "research.heading": "Robot intelligence for real industrial tasks",
-    "research.description": "My research centers on robotics foundation models and dexterous manipulation, with a focus on perception, learning, and manipulation for robots equipped with dexterous hands in real industrial settings. Guided by industrial tasks, I explore algorithms that connect visual perception with action generation and bring embodied intelligence into practical use.",
-    "research.numberModels": "01 / MODELS",
-    "research.numberEmbodiment": "02 / MANIPULATION",
-    "research.numberLearning": "03 / LEARNING",
-    "research.modelsDescription": "Connecting perception and task understanding with robot actions.",
-    "research.embodiment": "Dexterous Manipulation",
-    "research.embodimentDescription": "Coordinating robots and dexterous hands for industrial manipulation.",
-    "research.learning": "Robot Learning for Industry",
-    "research.learningDescription": "Validating and applying learning algorithms through real industrial tasks.",
+    "research.description": "My research focuses on robotics foundation models and dexterous manipulation, including perception, alignment, and contact-rich interaction in real industrial settings. I explore robotic algorithms and systems through autonomous insertion, dimensional measurement, and human–robot teleoperation tasks.",
     "research.progress": "Research in progress",
-    "research.progressDescription": "I'll share research projects and publications here as they become available.",
     "education.heading": "Academic background.",
     "education.doctoral": "Doctoral studies",
     "education.phd": "Doctor of Philosophy (Ph.D.)",
@@ -290,7 +316,6 @@
     "a11y.home": "Jiahui Zeng, back to top",
     "a11y.navigation": "Main navigation",
     "a11y.glance": "At a glance",
-    "a11y.topics": "Research topics",
     "a11y.education": "Education history",
     "a11y.internships": "Work experience",
     "a11y.emails": "Email addresses",
@@ -308,7 +333,20 @@
     "footer.copyright": "© 2026 Jiahui Zeng",
     "experience.partTime": "Part-time",
     "role.embodiedAlgorithm": "Embodied Intelligence Algorithm Engineer",
-    "research.focus": "Foundation Models & Dexterous Manipulation"
+    "research.focus": "Foundation Models & Dexterous Manipulation",
+    "project.connector.title": "Autonomous Robotic Insertion of Industrial Connectors",
+    "project.connector.summary": "This ongoing research addresses autonomous robotic insertion of industrial connectors under initial position and orientation errors. The planned approach combines visual information and contact feedback to connect target localization and alignment with local search and compliant insertion. Particular attention is given to seating verification and recovery from unsuccessful attempts, with the aim of improving reliability in practical industrial settings.",
+    "project.rotor.title": "Autonomous Compressor Rotor Insertion and Shaft Diameter Measurement",
+    "project.rotor.summary": "This ongoing research connects autonomous robotic insertion of compressor rotors with measurement of rotor shaft diameter. It examines rotor localization, axis alignment, and insertion alongside dimensional verification. The work also explores how grasping pose, measurement location, and robot positioning repeatability affect diameter readings, aiming to establish a coherent workflow linking manipulation and measurement.",
+    "portfolio.heading": "Project Experience",
+    "portfolio.eod.title": "Teleoperation of a Dual-Arm Quadruped Robot for EOD",
+    "portfolio.eod.summary": "This project combines Marvin robotic arms, an exoskeleton, and VR for remote operation of a dual-arm quadruped robot in specialized environments. It focuses on mapping operator motion to the robot arms, coordinating arm operation with body movement, and presenting field views and robot state. These elements connect the operator interface with remote execution in a unified teleoperation workflow.",
+    "portfolio.screwdriving.title": "Vision- and Force-Guided Robotic Screwdriving System",
+    "portfolio.screwdriving.summary": "This project uses a classical perception, planning, and control pipeline for robotic screwdriving. YOLO Pose keypoints and PnP geometry provide target localization and pre-alignment. Six-axis force/torque feedback informs contact detection and axial approach, coordinated with the screwdriving unit during tightening. The workflow connects target recognition, robot approach, contact-guided execution, and result verification.",
+    "portfolio.sheet-palletizing.title": "Vision-Guided Robotic Suction Picking and Palletizing of Sheet Workpieces",
+    "portfolio.sheet-palletizing.summary": "This project combines a Marvin robotic arm, SAM3 target segmentation, and pose estimation for automated sheet picking and palletizing. The workflow links target-region extraction with suction position and orientation, transfer-path planning, and pallet-layer management. Robot motion is coordinated with suction and release timing to connect picking, transfer, and placement within a consistent handling process.",
+    "portfolio.highway.title": "Quadruped Robot Teleoperation for Highway Operations",
+    "portfolio.highway.summary": "This project uses VR as the remote operator interface for a quadruped robot in highway operations. Operator intent is translated into locomotion and turning commands, supported by field views, body posture, and operating-state feedback. The work connects movement control, mode switching, and pause and takeover workflows, with attention to intuitive interaction and consistent operation states."
   },
   "zh": {
     "language.label": "网站语言",
@@ -326,19 +364,9 @@
     "glance.research": "研究方向",
     "glance.current": "目前兼职",
     "org.liverpool": "利物浦大学",
-    "research.models": "机器人大模型",
     "research.heading": "面向真实工业场景的机器人智能",
-    "research.description": "我的研究围绕机器人大模型与灵巧操作展开，关注机器人与灵巧手在真实工业环境中的感知、学习与操作。结合工业任务需求，探索从视觉感知到动作生成的算法方法，推动具身智能算法在实际作业场景中的验证与应用。",
-    "research.numberModels": "01 / 模型",
-    "research.numberEmbodiment": "02 / 操作",
-    "research.numberLearning": "03 / 学习",
-    "research.modelsDescription": "将感知与任务理解转化为机器人操作动作。",
-    "research.embodiment": "灵巧操作",
-    "research.embodimentDescription": "让机器人与灵巧手协同完成工业操作任务。",
-    "research.learning": "机器人学习与工业应用",
-    "research.learningDescription": "结合真实工业任务开展算法验证与应用。",
+    "research.description": "我的研究聚焦机器人大模型与灵巧操作，关注机器人在真实工业环境中的感知、对准与接触操作。围绕自主插入、尺寸检测与人机遥操作等任务，探索面向实际应用的机器人算法与系统。",
     "research.progress": "研究进行中",
-    "research.progressDescription": "后续将在这里分享研究项目与论文成果。",
     "education.heading": "教育背景",
     "education.doctoral": "博士研究生",
     "education.phd": "博士（Ph.D.）",
@@ -369,7 +397,6 @@
     "a11y.home": "曾家辉，返回顶部",
     "a11y.navigation": "主导航",
     "a11y.glance": "个人概况",
-    "a11y.topics": "研究主题",
     "a11y.education": "教育经历",
     "a11y.internships": "工作经历",
     "a11y.emails": "电子邮箱",
@@ -387,7 +414,20 @@
     "footer.copyright": "© 2026 曾家辉",
     "experience.partTime": "兼职",
     "role.embodiedAlgorithm": "具身智能算法工程师",
-    "research.focus": "机器人大模型与灵巧操作"
+    "research.focus": "机器人大模型与灵巧操作",
+    "project.connector.title": "工业连接器的机器人自主插入",
+    "project.connector.summary": "面向工业连接器装配中的自主插入任务，研究机器人在初始位置与姿态存在偏差时的目标定位、精准对准与接触操作。拟结合视觉信息与接触反馈，探索从接近、局部搜索到柔顺插入的闭环方法，并关注插入到位判断与失败恢复，提升实际工业条件下的操作稳定性。",
+    "project.rotor.title": "压缩机转子的自主插入与轴径测量",
+    "project.rotor.summary": "围绕压缩机转子的机器人自主插入与转子轴直径测量，研究精密操作与尺寸检测之间的协同。关注转子定位、轴线对准和插入过程，并探索夹持姿态、测量位置与机器人重复定位对轴径结果的影响，形成从操作到测量验证的完整作业链路。",
+    "portfolio.heading": "项目实践",
+    "portfolio.eod.title": "面向排爆作业的双臂四足机器人遥操作系统",
+    "portfolio.eod.summary": "面向特种场景下的远程作业，结合 Marvin 机械臂、外骨骼与 VR，组织双臂四足机器人的人机交互与协同操作。项目围绕操作端动作到机器人双臂的位姿映射、机身移动与机械臂操作衔接，以及现场视角和机器人状态反馈，构建从操作输入到远端执行的遥操作链路。",
+    "portfolio.screwdriving.title": "视觉与力觉引导的机器人螺钉自动拧紧系统",
+    "portfolio.screwdriving.summary": "基于传统感知、规划与控制方法，结合 YOLO Pose 关键点检测与 PnP 几何位姿求解，完成拧紧目标的定位与预对准。通过六维力/力矩反馈组织接触检测和轴向进给，并与螺丝机的旋拧过程协同，串联目标识别、机器人接近、接触拧紧与结果确认等环节。",
+    "portfolio.sheet-palletizing.title": "视觉引导的薄片工件机器人吸取与码垛系统",
+    "portfolio.sheet-palletizing.summary": "结合 Marvin 机械臂、SAM3 目标分割与 Pose 位姿估计，面向薄片工件建立从视觉感知到吸取码垛的自动化作业流程。围绕目标区域提取、吸取位置与朝向确定、搬运路径及码垛层位管理，协调机械臂运动与吸取释放时序，实现取料、转运和放置环节的衔接。",
+    "portfolio.highway.title": "面向高速公路作业的四足机器人遥操作系统",
+    "portfolio.highway.summary": "面向高速公路作业场景，以 VR 作为四足机器人的远程操作入口，将操作者的交互意图映射为机器人移动与转向指令。项目围绕现场视角、机身姿态和运行状态反馈，组织移动操作、模式切换与暂停接管流程，关注远程交互的直观性和操作状态的一致性。"
   }
 };
       const storageKey = 'jiahui-zeng-language';
